@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+   <meta charset="UTF-8">
+   <title>Web BlogTecno</title>
+   <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen">
+ </head>
+ <body>
+  <header id="inicio">
+  	<h1>BLOGTECNO</h1>
+  	<nav>
+  	<ul>
+      <li><a href="#tendencias">Tendencias</a></li>
+      <li><a href="#contacto">Formulario</a></li>
+      <li><a href="#info">Más info</a></li>
+    </ul>
+  	</nav>
+  </header>
+
+  <main>
+  	<section id="tendencias">
+     <h2>TENDENCIAS DEL SIGLO XXI</h2>
+      <article>
+        <img src="static/imagenes/tendencia1.jpg" alt="Tendencia 1" />
+        <img src="static/imagenes/tendencia2.jpg" alt="Tendencia 2" />
+        <img src="static/imagenes/tendencia3.jpg" alt="Tendencia 3" />
+        <img src="static/imagenes/tendencia4.jpg" alt="Tendencia 4" />
+      </article>
+    </section>
+    <section id="contacto">
+      <h2>SUBSCRÍBETE AL BOLETÍN</h2>
+      <form action="servicio.php" method="post">
+      	<fieldset>
+      	 <legend>Información personal</legend>	
+      	 <label for="nombre">Escribe tu nombre:</label><br>
+      	 <input type="text" id="nombre" name="nombre"><br>
+      	 <label for="nombre">Escribe tus apellidos:</label><br>
+      	 <input type="text" id="apellidos" name="apellidos"><br>
+      	 <label for="nombre">DNI:</label><br>
+      	 <input type="text" pattern="[0-9]{8}[A-Za-z]{1}" id="dni" name="dni" placeholder="Números y letra al final"><br>
+         <br>     
+         <label for="provincia" id="provincia">Selecciona tu provincia:</label><br>
+         <select name="provincia"> 
+          <optgroup label="Cantabria">
+            <option value="san">Santander</option> 
+          </optgroup>
+          <optgroup label="Comunidad de Madrid">
+            <option value="mad" selected="selected">Madrid</option> 
+          </optgroup> 
+          <optgroup label="Euskadi">
+            <option value="ala">Alava</option> 
+            <option value="biz">Bizkaia </option> 
+            <option value="gui">Gipuzkoa</option>
+          </optgroup>
+          <optgroup label="Galicia">
+            <option value="cor">A Coruña</option> 
+            <option value="lug">Lugo</option> 
+            <option value="ore">Orense</option> 
+            <option value="pon">Pontevedra</option>
+          </optgroup>
+         </select>
+      	</fieldset>
+        <br>
+      	<fieldset>
+      	 <legend>Interés en la revista</legend>	
+      	 <label for="nombre">Suscripción:</label><br>
+      	 <input type="radio" id="mensual" name="mensual" value="mensual">
+         <label for="nombre">Mensual</label>
+      	 <input type="radio" id="anual" name="anual" value="anual" checked>
+         <label for="nombre">Anual</label><br><br>
+         <label for="nombre">¿Donde nos conociste?</label><br>
+         <textarea rows="5" cols="50" name="texto"></textarea>
+      	</fieldset>
+      	<br>
+        <input type="submit" id="enviar" value="enviar">
+        </form> 
+    </section>
+  </main>
+
+  <footer id="info">
+    <br>
+  	<div id="contenedorPieDePagina">
+  		<p>Práctica BLOGTECNO: Diseñar una Web y practicar con los estilos y propiedades CSS. Volver a <a href="#inicio"><span class="inicio">Inicio</span></a></p>
+  	</div>
+  	<br>
+  </footer>
+
+ </body>
+</html>
