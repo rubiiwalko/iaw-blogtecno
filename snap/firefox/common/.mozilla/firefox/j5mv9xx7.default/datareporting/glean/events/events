@@ -1,0 +1,7 @@
+{"timestamp":3130348,"category":"webcompatreporting","name":"reason_dropdown","extra":{"setting":"required","glean_timestamp":"1739450499825"}}
+{"timestamp":3138632,"category":"nimbus_events","name":"validation_failed","extra":{"experiment":"add-an-image-to-pdf-with-alt-text-rollout","reason":"invalid-feature","glean_timestamp":"1739450508109","feature":"addAnImageInPDF"}}
+{"timestamp":3138633,"category":"nimbus_events","name":"is_ready","extra":{"glean_timestamp":"1739450508109"}}
+{"timestamp":3140061,"category":"urlbar","name":"engagement","extra":{"search_engine_default_id":"google-ubuntu-sn","selected_position":"1","provider":"HeuristicFallback","n_results":"1","results":"url","sap":"urlbar_newtab","search_mode":"","selected_result":"url","n_words":"1","glean_timestamp":"1739450509537","interaction":"typed","n_chars":"9","groups":"heuristic","engagement_type":"click","actions":"none"}}
+{"timestamp":3145947,"category":"translations.panel","name":"open","extra":{"flow_id":"cf431e7f-f124-43fe-b3b6-73133636e612","document_language":"en","opened_from":"translationsButton","auto_show":"true","view_name":"defaultView","glean_timestamp":"1739450515423"}}
+{"timestamp":3149092,"category":"translations.panel","name":"cancel_button","extra":{"flow_id":"cf431e7f-f124-43fe-b3b6-73133636e612","glean_timestamp":"1739450518568"}}
+{"timestamp":3149159,"category":"translations.panel","name":"close","extra":{"glean_timestamp":"1739450518635","flow_id":"cf431e7f-f124-43fe-b3b6-73133636e612"}}

@@ -1,0 +1,7 @@
+# This file is created by ibus-daemon, please do not modify it.
+# This file allows processes on the machine to find the
+# ibus session bus with the below address.
+# If the IBUS_ADDRESS environment variable is set, it will
+# be used rather than this file.
+IBUS_ADDRESS=unix:path=/home/pruevas_teo/.cache/ibus/dbus-cUkEibpg,guid=3cdc17dfcb5432992c2600a367e5388a
+IBUS_DAEMON_PID=3286

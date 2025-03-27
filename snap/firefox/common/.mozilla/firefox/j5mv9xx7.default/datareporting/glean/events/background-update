@@ -1,0 +1,1 @@
+{"timestamp":3138632,"category":"nimbus_events","name":"validation_failed","extra":{"experiment":"add-an-image-to-pdf-with-alt-text-rollout","reason":"invalid-feature","glean_timestamp":"1739450508109","feature":"addAnImageInPDF"}}

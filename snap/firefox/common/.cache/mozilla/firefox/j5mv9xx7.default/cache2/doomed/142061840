@@ -1,0 +1,1370 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; object-src 'none'; script-src resource: chrome:; connect-src https:; img-src https: data: blob: chrome:; style-src 'unsafe-inline';">
+    <meta name="color-scheme" content="light dark">
+    <title data-l10n-id="newtab-page-title"></title>
+    <link rel="icon" type="image/png" href="chrome://branding/content/icon32.png"/>
+    <link rel="localization" href="branding/brand.ftl" />
+    <link rel="localization" href="toolkit/branding/brandings.ftl" />
+    <link rel="localization" href="browser/newtab/newtab.ftl" />
+    <link rel="stylesheet" href="chrome://global/skin/design-system/tokens-brand.css">
+    <link rel="stylesheet" href="chrome://browser/content/contentSearchUI.css" />
+    <link rel="stylesheet" href="chrome://activity-stream/content/css/activity-stream.css" />
+  </head>
+  <!-- Cached: Thu, 13 Feb 2025 12:51:49 GMT -->
+  <body class="activity-stream">
+    <div id="header-asrouter-container" role="presentation"></div>
+    <div id="root">
+      <div class="has-search"><menu class="personalizeButtonWrapper"><span><button class="icon icon-settings personalize-button" data-l10n-id="newtab-personalize-icon-label"></button><div class="customize-menu" role="dialog" data-l10n-id="newtab-personalize-dialog-label"><div class="close-button-wrapper"><button class="close-button" data-l10n-id="newtab-custom-close-button"></button></div><div class="home-section"><div id="shortcuts-section" class="section"><moz-toggle id="shortcuts-toggle" pressed="true" onToggle="function() {
+    [native code]
+}" data-preference="feeds.topsites" data-eventSource="TOP_SITES" data-l10n-id="newtab-custom-shortcuts-toggle" data-l10n-attrs="label, description"></moz-toggle><div><div class="more-info-top-wrapper"><div class="more-information"><select id="row-selector" class="selector" name="row-count" data-preference="topSitesRows" aria-labelledby="custom-shortcuts-title"><option selected="" value="1" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 1}"></option><option value="2" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 2}"></option><option value="3" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 3}"></option><option value="4" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 4}"></option></select><div class="check-wrapper" role="presentation"><input type="checkbox" id="sponsored-shortcuts" class="sponsored-checkbox" checked="" data-preference="showSponsoredTopSites" data-eventSource="SPONSORED_TOP_SITES"/><label class="sponsored" for="sponsored-shortcuts" data-l10n-id="newtab-custom-sponsored-sites"></label></div></div></div></div></div><div id="pocket-section" class="section"><label class="switch"><moz-toggle id="pocket-toggle" pressed="true" onToggle="function() {
+    [native code]
+}" aria-describedby="custom-pocket-subtitle" data-preference="feeds.section.topstories" data-eventSource="TOP_STORIES" data-l10n-id="newtab-custom-stories-toggle" data-l10n-attrs="label, description"></moz-toggle></label><div><div class="more-info-pocket-wrapper"><div class="more-information"><div class="check-wrapper" role="presentation"><input type="checkbox" id="sponsored-pocket" class="sponsored-checkbox" checked="" data-preference="showSponsored" data-eventSource="POCKET_SPOCS"/><label class="sponsored" for="sponsored-pocket" data-l10n-id="newtab-custom-pocket-sponsored"></label></div></div></div></div></div><div id="recent-section" class="section"><label class="switch"><moz-toggle id="highlights-toggle" onToggle="function() {
+    [native code]
+}" data-preference="feeds.section.highlights" data-eventSource="HIGHLIGHTS" data-l10n-id="newtab-custom-recent-toggle" data-l10n-attrs="label, description"></moz-toggle></label></div><span class="divider" role="separator"></span><div><button id="settings-link" class="external-link" data-l10n-id="newtab-custom-settings"></button></div></div></div></span></menu><div class="weatherWrapper"></div><div class="outer-wrapper ds-outer-wrapper-search-alignment ds-outer-wrapper-breakpoint-override visible-logo"><main><div class="non-collapsible-section"><div class="search-wrapper"><div class="logo-and-wordmark"><div class="logo"></div><div class="wordmark"></div></div><div class="search-inner-wrapper"><button class="search-handoff-button" tabindex="-1"><div class="fake-textbox"></div><input type="search" class="fake-editable" tabindex="-1" aria-hidden="true"/><div class="fake-caret"></div></button></div></div></div><div class="body-wrapper on"><div class="discovery-stream ds-layout"><div class="ds-column ds-column-12"><div class="ds-column-grid"><div><div class="ds-top-sites"><section class="collapsible-section top-sites" data-section-id="topsites"><div class="section-top-bar"><h3 class="section-title-container " style="visibility:hidden"><span class="section-title"><span data-l10n-id="newtab-section-header-topsites"></span></span><span class="learn-more-link-wrapper"></span></h3></div><div><ul class="top-sites-list"><li class="top-site-outer placeholder  "><div class="top-site-inner"><a class="top-site-button" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper"><div class=""></div></div></div><div class="title"><span dir="auto"><br/></span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer placeholder  "><div class="top-site-inner"><a class="top-site-button" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper"><div class=""></div></div></div><div class="title"><span dir="auto"><br/></span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer placeholder  "><div class="top-site-inner"><a class="top-site-button" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper"><div class=""></div></div></div><div class="title"><span dir="auto"><br/></span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="http://10.0.2.15/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper letter-fallback" data-fallback="1" style="background-color:#FF4F5F"><div class=""></div></div></div><div class="title"><span dir="auto">10.0.2.15</span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;10.0.2.15&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="http://localhost/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper letter-fallback" data-fallback="l" style="background-color:#FF7139"><div class=""></div></div></div><div class="title"><span dir="auto">localhost</span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;localhost&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://www.youtube.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="Y"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/youtube-com@2x.png)"></div></div></div><div class="title"><span dir="auto">YouTube</span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;YouTube&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer hide-for-narrow"><div class="top-site-inner"><a class="top-site-button" href="https://www.facebook.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="F"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/facebook-com@2x.png)"></div></div></div><div class="title"><span dir="auto">Facebook</span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Facebook&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer hide-for-narrow"><div class="top-site-inner"><a class="top-site-button" href="https://www.wikipedia.org/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="W"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png)"></div></div></div><div class="title"><span dir="auto">Wikipedia</span><span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Wikipedia&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li></ul><div class="edit-topsites-wrapper"></div></div></section></div></div></div></div><style data-styles="[[null]]"></style></div><section class="collapsible-section ds-layout" data-section-id="topstories"><div class="section-top-bar"><h3 class="section-title-container "><span class="section-title"><span data-l10n-id="newtab-section-header-stories"></span></span><span class="learn-more-link-wrapper"><span class="learn-more-link"><a href="https://getpocket.com/firefox/new_tab_learn_more" data-l10n-id="newtab-pocket-learn-more"></a></span></span></h3></div><div><div class="discovery-stream ds-layout"><div class="ds-column ds-column-12"><div class="ds-column-grid"><div><div><div class="ds-card-grid    ds-card-grid-include-descriptions "><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/d17c7482-5f88-4e8c-90fb-29eac6414165.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd17c7482-5f88-4e8c-90fb-29eac6414165.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd17c7482-5f88-4e8c-90fb-29eac6414165.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd17c7482-5f88-4e8c-90fb-29eac6414165.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd17c7482-5f88-4e8c-90fb-29eac6414165.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd17c7482-5f88-4e8c-90fb-29eac6414165.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd17c7482-5f88-4e8c-90fb-29eac6414165.jpeg 404w"/></picture></div><a href="https://www.nytimes.com/es/2025/02/11/espanol/estados-unidos/ee-uu-ciudadania-nacimiento-wong-kim-ark.html?utm_source=firefox-newtab-es-es" title="El hombre que logró que EE. UU. otorgara ciudadanía por nacimiento para todos" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">The New York Times</p><header class="title clamp">El hombre que logró que EE. UU. otorgara ciudadanía por nacimiento para todos</header><p class="excerpt clamp">Cuando las autoridades negaron que fuera ciudadano, Wong Kim Ark llevó su caso ante la Corte Suprema y ganó. Hoy, esa decisión es el centro del debate sobre quién puede ser estadounidense.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;El hombre que logró que EE. UU. otorgara ciudadanía por nacimiento para todos&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/861fc1db-2011-4a3c-9883-48d5f6dea904.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F861fc1db-2011-4a3c-9883-48d5f6dea904.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F861fc1db-2011-4a3c-9883-48d5f6dea904.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F861fc1db-2011-4a3c-9883-48d5f6dea904.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F861fc1db-2011-4a3c-9883-48d5f6dea904.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F861fc1db-2011-4a3c-9883-48d5f6dea904.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F861fc1db-2011-4a3c-9883-48d5f6dea904.jpeg 404w"/></picture></div><a href="https://www.lavanguardia.com/andro4all/ciencia/llevaba-46-000-anos-congelado-en-el-permafrost-pero-estaba-completamente-vivo-ahora-tiene-la-clave-para-desbloquear-los-misterios-de-la-genetica?utm_source=firefox-newtab-es-es" title="Llevaba 46.000 años congelado en el permafrost, pero estaba completamente vivo. Tiene la clave para desbloquear los misterios de la genética" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">La Vanguardia</p><header class="title clamp">Llevaba 46.000 años congelado en el permafrost, pero estaba completamente vivo. Tiene la clave para desbloquear los misterios de la genética</header><p class="excerpt clamp">Un grupo de investigadores del Instituto de Zoología de la Universidad de Colonia (Alemania) han conseguido revivir un pequeño gusano que llevaba congelado decenas de miles de años en el Permafrost siberiano</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Llevaba 46.000 años congelado en el permafrost, pero estaba completamente vivo. Tiene la clave para desbloquear los misterios de la genética&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/d4161e2b-b031-4212-b8dc-024df04b6aee.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd4161e2b-b031-4212-b8dc-024df04b6aee.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd4161e2b-b031-4212-b8dc-024df04b6aee.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd4161e2b-b031-4212-b8dc-024df04b6aee.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd4161e2b-b031-4212-b8dc-024df04b6aee.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd4161e2b-b031-4212-b8dc-024df04b6aee.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fd4161e2b-b031-4212-b8dc-024df04b6aee.jpeg 404w"/></picture></div><a href="https://www.publico.es/internacional/eeuu/pocos-impuestos-crimenes-osos-calles-decadencia-grafton-experimento-libertario-pueblo-estados-unidos.html?utm_source=firefox-newtab-es-es" title="De pocos impuestos a crímenes y osos por las calles: la decadencia de Grafton, el experimento libertario en un pueblo de Estados Unidos" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Público</p><header class="title clamp">De pocos impuestos a crímenes y osos por las calles: la decadencia de Grafton, el experimento libertario en un pueblo de Estados Unidos</header><p class="excerpt clamp">El pequeño pueblo de Grafton, en Nuevo Hampshire, vivió un experimento que debía conducirle a ser una ciudad completamente libre, desgajada de las obligaciones estatales. Al amparo de las ideas libertarias de muchos de sus vecinos, la cosa terminó con violencia y osos campando alegremente por calles y fincas.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;De pocos impuestos a crímenes y osos por las calles: la decadencia de Grafton, el experimento libertario en un pueblo de Estados Unidos&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/ccecb2aa-8e73-4b0f-acb3-39e7068690b7.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fccecb2aa-8e73-4b0f-acb3-39e7068690b7.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fccecb2aa-8e73-4b0f-acb3-39e7068690b7.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fccecb2aa-8e73-4b0f-acb3-39e7068690b7.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fccecb2aa-8e73-4b0f-acb3-39e7068690b7.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fccecb2aa-8e73-4b0f-acb3-39e7068690b7.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fccecb2aa-8e73-4b0f-acb3-39e7068690b7.jpeg 404w"/></picture></div><a href="https://es.euronews.com/viajes/2025/02/09/no-te-quedes-con-positano-los-mejores-secretos-de-la-costa-de-amalfi-para-evitar-las-multi?utm_source=firefox-newtab-es-es" title="&quot;No te quedes solo en Positano&quot;: Los mejores secretos de la costa de Amalfi para evitar multitudes" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Euronews Español</p><header class="title clamp">&quot;No te quedes solo en Positano&quot;: Los mejores secretos de la costa de Amalfi para evitar multitudes</header><p class="excerpt clamp">Los huéspedes del Hotel Poseidon en Positano aseguran que es impresionante y lujoso, pero Liliana Mascolo, empleada de tercera generación del hotel familiar, siempre lo ha llamado su hogar.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;\&quot;No te quedes solo en Positano\&quot;: Los mejores secretos de la costa de Amalfi para evitar multitudes&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/ac0d4552-25ba-41e6-bf8d-807761289152.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fac0d4552-25ba-41e6-bf8d-807761289152.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fac0d4552-25ba-41e6-bf8d-807761289152.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fac0d4552-25ba-41e6-bf8d-807761289152.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fac0d4552-25ba-41e6-bf8d-807761289152.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fac0d4552-25ba-41e6-bf8d-807761289152.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fac0d4552-25ba-41e6-bf8d-807761289152.jpeg 404w"/></picture></div><a href="https://www.nationalgeographicla.com/animales/2025/02/la-ciencia-explica-como-encuentran-los-perros-perdidos-el-camino-de-regreso-a-casa?utm_source=firefox-newtab-es-es" title="La ciencia explica cómo encuentran los perros perdidos el camino de regreso a casa" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">National Geographic</p><header class="title clamp">La ciencia explica cómo encuentran los perros perdidos el camino de regreso a casa</header><p class="excerpt clamp">Descendientes del lobo gris, los perros son capaces de encontrar el camino a casa recorriendo miles de kilómetros de distancia y haciendo uso de mucho más que su olfato.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;La ciencia explica cómo encuentran los perros perdidos el camino de regreso a casa&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/ce81969a-bf51-4238-822a-285d8c6027b4.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fce81969a-bf51-4238-822a-285d8c6027b4.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fce81969a-bf51-4238-822a-285d8c6027b4.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fce81969a-bf51-4238-822a-285d8c6027b4.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fce81969a-bf51-4238-822a-285d8c6027b4.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fce81969a-bf51-4238-822a-285d8c6027b4.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fce81969a-bf51-4238-822a-285d8c6027b4.jpeg 404w"/></picture></div><a href="https://www.jotdown.es/2025/02/inteligencia-artificial-arquitectura/?utm_source=firefox-newtab-es-es" title="Inteligencia artificial en arquitectura: la nueva armonía de función y forma" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Jot Down</p><header class="title clamp">Inteligencia artificial en arquitectura: la nueva armonía de función y forma</header><p class="excerpt clamp">La innovación siempre genera dudas y temores. </p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Inteligencia artificial en arquitectura: la nueva armonía de función y forma&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/dc3789c0-6dad-4294-85de-401c46d18654.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fdc3789c0-6dad-4294-85de-401c46d18654.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fdc3789c0-6dad-4294-85de-401c46d18654.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fdc3789c0-6dad-4294-85de-401c46d18654.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fdc3789c0-6dad-4294-85de-401c46d18654.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fdc3789c0-6dad-4294-85de-401c46d18654.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fdc3789c0-6dad-4294-85de-401c46d18654.jpeg 404w"/></picture></div><a href="https://www.bbc.com/mundo/articles/clyjy5ll6mdo?utm_source=firefox-newtab-es-es" title="Qué es el movimiento &quot;desinfluencer&quot; y cómo busca cambiar la cultura de las compras excesivas" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">BBC</p><header class="title clamp">Qué es el movimiento &quot;desinfluencer&quot; y cómo busca cambiar la cultura de las compras excesivas</header><p class="excerpt clamp">En 2019, Diana Wiebe estaba inmersa en las redes sociales cuando se encontró con una influencer que promocionaba unos rizadores sin calor. &quot;Eran rizadores con los que podías dormir toda la noche y la promesa era despertarte con unos rizos preciosos&quot;, le cuenta a la BBC.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Qué es el movimiento \&quot;desinfluencer\&quot; y cómo busca cambiar la cultura de las compras excesivas&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/97f641ec-f7b5-4a7f-8098-8674553510b9.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F97f641ec-f7b5-4a7f-8098-8674553510b9.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F97f641ec-f7b5-4a7f-8098-8674553510b9.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F97f641ec-f7b5-4a7f-8098-8674553510b9.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F97f641ec-f7b5-4a7f-8098-8674553510b9.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F97f641ec-f7b5-4a7f-8098-8674553510b9.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F97f641ec-f7b5-4a7f-8098-8674553510b9.jpeg 404w"/></picture></div><a href="https://www.trendencias.com/silver/no-negociables-este-medico-experto-longevidad-para-vivir-mejor?utm_source=firefox-newtab-es-es" title="Los &#x27;no negociables&#x27; de este médico experto en longevidad para vivir más y mejor" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Trendencias</p><header class="title clamp">Los &#x27;no negociables&#x27; de este médico experto en longevidad para vivir más y mejor</header><p class="excerpt clamp">
+El doctor Darshan Shah explica en una entrenvista cómo vivir para tener una vida una vida larga y saludable
+</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Los &#x27;no negociables&#x27; de este médico experto en longevidad para vivir más y mejor&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/1db617a2-f52e-4a70-a648-bb1dc2b21805.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F1db617a2-f52e-4a70-a648-bb1dc2b21805.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F1db617a2-f52e-4a70-a648-bb1dc2b21805.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F1db617a2-f52e-4a70-a648-bb1dc2b21805.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F1db617a2-f52e-4a70-a648-bb1dc2b21805.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F1db617a2-f52e-4a70-a648-bb1dc2b21805.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F1db617a2-f52e-4a70-a648-bb1dc2b21805.jpeg 404w"/></picture></div><a href="https://www.bebesymas.com/noticias/tres-consejos-infalibles-reconocido-psicologo-que-me-ayudaron-a-encontrar-amor-verdadero?utm_source=firefox-newtab-es-es" title="Los tres consejos infalibles de un reconocido psicólogo que me ayudaron a encontrar el amor verdadero" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Bebés y Más</p><header class="title clamp">Los tres consejos infalibles de un reconocido psicólogo que me ayudaron a encontrar el amor verdadero</header><p class="excerpt clamp">Todas las personas, o al menos quienes deseamos tener una pareja, deseamos encontrar una persona con la que podamos tener una relación amorosa, feliz y duradera.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Los tres consejos infalibles de un reconocido psicólogo que me ayudaron a encontrar el amor verdadero&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/4b267774-b75a-4465-a4d0-89fd55fa5014.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4b267774-b75a-4465-a4d0-89fd55fa5014.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4b267774-b75a-4465-a4d0-89fd55fa5014.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4b267774-b75a-4465-a4d0-89fd55fa5014.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4b267774-b75a-4465-a4d0-89fd55fa5014.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4b267774-b75a-4465-a4d0-89fd55fa5014.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4b267774-b75a-4465-a4d0-89fd55fa5014.jpeg 404w"/></picture></div><a href="https://www.muyinteresante.com/historia/arqueologos-descubren-fichas-juego-estrategia-romano-turquia.html?utm_source=firefox-newtab-es-es" title="Arqueólogos descubren en Turquía fichas antiguas de un juego de estrategia romano de hace 1.600 años al que jugaban los soldados para entrenar" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Muy Interesante</p><header class="title clamp">Arqueólogos descubren en Turquía fichas antiguas de un juego de estrategia romano de hace 1.600 años al que jugaban los soldados para entrenar</header><p class="excerpt clamp"> Unas antiguas fichas de hueso halladas en Turquía revelan que los soldados romanos jugaban a juegos de estrategia para entrenar sus habilidades en el campo de batalla. </p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Arqueólogos descubren en Turquía fichas antiguas de un juego de estrategia romano de hace 1.600 años al que jugaban los soldados para entrenar&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/7a604385-5e75-4c0d-b423-7c26611cfcd7.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7a604385-5e75-4c0d-b423-7c26611cfcd7.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7a604385-5e75-4c0d-b423-7c26611cfcd7.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7a604385-5e75-4c0d-b423-7c26611cfcd7.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7a604385-5e75-4c0d-b423-7c26611cfcd7.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7a604385-5e75-4c0d-b423-7c26611cfcd7.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F7a604385-5e75-4c0d-b423-7c26611cfcd7.jpeg 404w"/></picture></div><a href="https://www.nytimes.com/es/2025/02/11/espanol/estilos-de-vida/garbanzos-beneficios-recetas.html?utm_source=firefox-newtab-es-es" title="¿Cuáles son los beneficios de comer garbanzos?" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">The New York Times</p><header class="title clamp">¿Cuáles son los beneficios de comer garbanzos?</header><p class="excerpt clamp">Las proteínas que aportan estas leguminosas la hacen una alternativa saludable si quieres incorporar más plantas a tu dieta.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;¿Cuáles son los beneficios de comer garbanzos?&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/29eabc0e-d455-48d3-9d41-e97435c68ca7.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F29eabc0e-d455-48d3-9d41-e97435c68ca7.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F29eabc0e-d455-48d3-9d41-e97435c68ca7.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F29eabc0e-d455-48d3-9d41-e97435c68ca7.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F29eabc0e-d455-48d3-9d41-e97435c68ca7.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F29eabc0e-d455-48d3-9d41-e97435c68ca7.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F29eabc0e-d455-48d3-9d41-e97435c68ca7.jpeg 404w"/></picture></div><a href="https://theconversation.com/la-extrana-psicologia-de-los-aeropuertos-248925?utm_source=firefox-newtab-es-es" title="La extraña psicología de los aeropuertos" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">The Conversation</p><header class="title clamp">La extraña psicología de los aeropuertos</header><p class="excerpt clamp">Muchos de nosotros hemos sido testigos de comportamientos inusuales e incluso antisociales en un aeropuerto o en un vuelo.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;La extraña psicología de los aeropuertos&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/79b513d8-0441-47a9-891a-6c961ba0a195.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F79b513d8-0441-47a9-891a-6c961ba0a195.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F79b513d8-0441-47a9-891a-6c961ba0a195.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F79b513d8-0441-47a9-891a-6c961ba0a195.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F79b513d8-0441-47a9-891a-6c961ba0a195.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F79b513d8-0441-47a9-891a-6c961ba0a195.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F79b513d8-0441-47a9-891a-6c961ba0a195.jpeg 404w"/></picture></div><a href="https://www.relevo.com/futbol/liga-primera/renovacion-lewandowski-abre-debates-sobre-20250212144512-nt.html?utm_source=firefox-newtab-es-es" title="La renovación de Lewandowski abre debates sobre cuál es el fichaje idóneo en el próximo mercado del Barça" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Relevo</p><header class="title clamp">La renovación de Lewandowski abre debates sobre cuál es el fichaje idóneo en el próximo mercado del Barça</header><p class="excerpt clamp"> El ariete polaco pasa por un muy buen estado de forma. </p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;La renovación de Lewandowski abre debates sobre cuál es el fichaje idóneo en el próximo mercado del Barça&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/47a9ff28-fe56-4df0-a4cf-320257e99b80.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F47a9ff28-fe56-4df0-a4cf-320257e99b80.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F47a9ff28-fe56-4df0-a4cf-320257e99b80.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F47a9ff28-fe56-4df0-a4cf-320257e99b80.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F47a9ff28-fe56-4df0-a4cf-320257e99b80.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F47a9ff28-fe56-4df0-a4cf-320257e99b80.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F47a9ff28-fe56-4df0-a4cf-320257e99b80.jpeg 404w"/></picture></div><a href="https://www.esquire.com/es/ciencia/a62959180/conciencia-corrientes-electricas-cerebro-misterio-humanidad/?utm_source=firefox-newtab-es-es" title="Un equipo de científicos propone una nueva teoría según la cual la conciencia podría estar oculta en los campos eléctricos y magnéticos del cerebro" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Esquire</p><header class="title clamp">Un equipo de científicos propone una nueva teoría según la cual la conciencia podría estar oculta en los campos eléctricos y magnéticos del cerebro</header><p class="excerpt clamp">Estas señales invisibles podrían ser la clave de todo y ayudarnos a resolver el misterio de la conciencia, una de las tareas más complejas emprendidas por la humanidad.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Un equipo de científicos propone una nueva teoría según la cual la conciencia podría estar oculta en los campos eléctricos y magnéticos del cerebro&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/f6945d28-09eb-429d-809a-3ea2a443be37.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Ff6945d28-09eb-429d-809a-3ea2a443be37.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Ff6945d28-09eb-429d-809a-3ea2a443be37.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Ff6945d28-09eb-429d-809a-3ea2a443be37.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Ff6945d28-09eb-429d-809a-3ea2a443be37.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Ff6945d28-09eb-429d-809a-3ea2a443be37.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Ff6945d28-09eb-429d-809a-3ea2a443be37.jpeg 404w"/></picture></div><a href="https://www.businessinsider.es/finanzas-personales/como-invertir-10000-euros-ahora-mismo-seis-expertos-finanzas-1439612?utm_source=firefox-newtab-es-es" title="Cómo invertir 10.000 euros ahora mismo, según seis expertos en finanzas" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Business Insider</p><header class="title clamp">Cómo invertir 10.000 euros ahora mismo, según seis expertos en finanzas</header><p class="excerpt clamp">Los expertos en finanzas están recomendado a sus clientes diversificar su cartera de inversión con acciones, bonos y activos reales para invertir en 2025.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Cómo invertir 10.000 euros ahora mismo, según seis expertos en finanzas&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/87251407-a9cc-4177-9971-a7c769285a72.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F87251407-a9cc-4177-9971-a7c769285a72.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F87251407-a9cc-4177-9971-a7c769285a72.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F87251407-a9cc-4177-9971-a7c769285a72.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F87251407-a9cc-4177-9971-a7c769285a72.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F87251407-a9cc-4177-9971-a7c769285a72.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F87251407-a9cc-4177-9971-a7c769285a72.jpeg 404w"/></picture></div><a href="https://www.serpadres.es/educacion/investiga-la-dislexia-en-bebes-de-3-meses.html?utm_source=firefox-newtab-es-es" title="Harvard investiga la dislexia en bebés de 3 meses: así cambiará la detección temprana" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">SerPadres</p><header class="title clamp">Harvard investiga la dislexia en bebés de 3 meses: así cambiará la detección temprana</header><p class="excerpt clamp"> La Universidad de Harvard tiene en marcha un proyecto pionero que investiga la dislexia en bebés de 3 meses antes de que aparezca el problema </p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Harvard investiga la dislexia en bebés de 3 meses: así cambiará la detección temprana&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/b0b36286-df59-4348-935f-af3b271090a2.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb0b36286-df59-4348-935f-af3b271090a2.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb0b36286-df59-4348-935f-af3b271090a2.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb0b36286-df59-4348-935f-af3b271090a2.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb0b36286-df59-4348-935f-af3b271090a2.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb0b36286-df59-4348-935f-af3b271090a2.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fb0b36286-df59-4348-935f-af3b271090a2.jpeg 404w"/></picture></div><a href="https://www.elmundo.es/economia/vivienda/2025/02/08/67a488dbfc6c83075a8b4599.html?utm_source=firefox-newtab-es-es" title="Del &#x27;austericidio&#x27; de la vivienda al recalentamiento de los precios : &quot;Hay una burbuja de demanda, la gente hace ofertas al alza y se sobreendeuda para comprar casa&quot;" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">El Mundo</p><header class="title clamp">Del &#x27;austericidio&#x27; de la vivienda al recalentamiento de los precios : &quot;Hay una burbuja de demanda, la gente hace ofertas al alza y se sobreendeuda para comprar casa&quot;</header><p class="excerpt clamp">Las medidas para evitar una burbuja como la de 2008 han terminado ahogando el mercado residencial y elevando los valores a niveles históricos. ¿Hay sobreprecio? ¿Cómo detectarlo?</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Del &#x27;austericidio&#x27; de la vivienda al recalentamiento de los precios : \&quot;Hay una burbuja de demanda, la gente hace ofertas al alza y se sobreendeuda para comprar casa\&quot;&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/e0fe1dc7-dacf-47e7-9fca-c8da417129f0.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fe0fe1dc7-dacf-47e7-9fca-c8da417129f0.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fe0fe1dc7-dacf-47e7-9fca-c8da417129f0.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fe0fe1dc7-dacf-47e7-9fca-c8da417129f0.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fe0fe1dc7-dacf-47e7-9fca-c8da417129f0.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fe0fe1dc7-dacf-47e7-9fca-c8da417129f0.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2Fe0fe1dc7-dacf-47e7-9fca-c8da417129f0.jpeg 404w"/></picture></div><a href="https://www.eleconomista.es/galerias/eleconomista/21611/La-bebida-que-cada-vez-bebemos-menos-evita-la-perdida-de-memoria-y-ayuda-a-reducir-el-estres-tambien-mejora-la-concentracion?utm_source=firefox-newtab-es-es" title="La bebida que cada vez bebemos menos, evita la pérdida de memoria y ayuda a reducir el estrés: también mejora la concentración" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">elEconomista.es</p><header class="title clamp">La bebida que cada vez bebemos menos, evita la pérdida de memoria y ayuda a reducir el estrés: también mejora la concentración</header><p class="excerpt clamp">En España, las temperaturas son muy bajas en un gran porcentaje de zonas del país. Y no es para menos.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;La bebida que cada vez bebemos menos, evita la pérdida de memoria y ayuda a reducir el estrés: también mejora la concentración&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/4b24596b-df95-49bc-89c6-7a78055b56a7.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4b24596b-df95-49bc-89c6-7a78055b56a7.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4b24596b-df95-49bc-89c6-7a78055b56a7.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4b24596b-df95-49bc-89c6-7a78055b56a7.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4b24596b-df95-49bc-89c6-7a78055b56a7.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4b24596b-df95-49bc-89c6-7a78055b56a7.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F4b24596b-df95-49bc-89c6-7a78055b56a7.jpeg 404w"/></picture></div><a href="https://www.bbc.com/mundo/articles/c7vdj2z447qo?utm_source=firefox-newtab-es-es" title="Cómo un pequeño &quot;punto azul&quot; en nuestro cerebro controla el sueño y genera un enorme interés entre los científicos" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">BBC</p><header class="title clamp">Cómo un pequeño &quot;punto azul&quot; en nuestro cerebro controla el sueño y genera un enorme interés entre los científicos</header><p class="excerpt clamp">Cualquiera que padezca insomnio conoce la impaciencia y la frustración que aparece mientras se lucha por apagar la cabeza y silenciar las voces interiores. Desearías tener un botón que pueda apagar instantáneamente toda esa actividad mental.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Cómo un pequeño \&quot;punto azul\&quot; en nuestro cerebro controla el sueño y genera un enorme interés entre los científicos&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/684340e2-0181-4638-9e18-2fff83f55434.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F684340e2-0181-4638-9e18-2fff83f55434.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F684340e2-0181-4638-9e18-2fff83f55434.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F684340e2-0181-4638-9e18-2fff83f55434.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F684340e2-0181-4638-9e18-2fff83f55434.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F684340e2-0181-4638-9e18-2fff83f55434.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F684340e2-0181-4638-9e18-2fff83f55434.jpeg 404w"/></picture></div><a href="https://www.revistaad.es/articulos/velas-de-miel-titual-dos-veces-mes?utm_source=firefox-newtab-es-es" title="Velas de miel: aprende el ritual que atrae la energía positiva dos veces al mes" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">AD</p><header class="title clamp">Velas de miel: aprende el ritual que atrae la energía positiva dos veces al mes</header><p class="excerpt clamp">Es un ritual sencillo que te puede traer muchas alegrías. El poder las velas de miel, combinado con la numerología de los días 11 y 22 de cada mes, hará que la energía positiva fluya en tu casa y en tu vida.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Velas de miel: aprende el ritual que atrae la energía positiva dos veces al mes&quot;}" class="context-menu-button icon"></button></div></div></div></article><article class="ds-card   ds-card-title-lines-3 ds-card-desc-lines-3  "><div class="img-wrapper"><picture class="ds-image
+       img
+      
+      
+    "><img loading="lazy" crossorigin="anonymous" sizes="(min-width: 1122px) 296px,(min-width: 866px) 218px,(max-width: 610px) 202px,202px" src="https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/440d728c-66f1-4cd3-b640-2a10eb17c00e.jpeg" srcSet="https://img-getpocket.cdn.mozilla.net/296x148/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F440d728c-66f1-4cd3-b640-2a10eb17c00e.jpeg 296w,https://img-getpocket.cdn.mozilla.net/592x296/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F440d728c-66f1-4cd3-b640-2a10eb17c00e.jpeg 592w,https://img-getpocket.cdn.mozilla.net/218x109/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F440d728c-66f1-4cd3-b640-2a10eb17c00e.jpeg 218w,https://img-getpocket.cdn.mozilla.net/436x218/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F440d728c-66f1-4cd3-b640-2a10eb17c00e.jpeg 436w,https://img-getpocket.cdn.mozilla.net/202x101/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F440d728c-66f1-4cd3-b640-2a10eb17c00e.jpeg 202w,https://img-getpocket.cdn.mozilla.net/404x202/filters:format(jpeg):quality(60):no_upscale():strip_exif()/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fpocket-curatedcorpusapi-prod-images%2F440d728c-66f1-4cd3-b640-2a10eb17c00e.jpeg 404w"/></picture></div><a href="https://viajar.elperiodico.com/escapate_cerca/encantos-san-lorenzo-escorial-sitio-real-114083035?utm_source=firefox-newtab-es-es" title="Todos los encantos de San Lorenzo de El Escorial: un sitio muy real" class="ds-card-link"><div class="impression-observer"></div></a><div class="meta"><div class="info-wrap"><p class="source clamp">Viajar</p><header class="title clamp">Todos los encantos de San Lorenzo de El Escorial: un sitio muy real</header><p class="excerpt clamp">Esta población de la sierra madrileña es un real sitio rebosante de piedras e historia. Pero también un sitio muy real, donde conviven emprendedores llegados de Japón, Senegal y Jijona, coleccionistas de bártulos y de mariposas.</p></div></div><div class="card-stp-button-hover-background"><div class="card-stp-button-position-wrapper"><button class="card-stp-button"><span class="story-badge-icon icon icon-pocket-save"></span><span data-l10n-id="newtab-pocket-save"></span></button><div class="context-menu-position-container"><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Todos los encantos de San Lorenzo de El Escorial: un sitio muy real&quot;}" class="context-menu-button icon"></button></div></div></div></article></div></div></div><div><div class="ds-navigation ds-navigation-left-align "><a href="https://www.mozilla.org/privacy/firefox/#recommend-relevant-content" class="ds-navigation-privacy"><span data-l10n-id="newtab-section-menu-privacy-notice"></span></a></div></div></div></div><style data-styles="[[null,{&quot;.ds-navigation&quot;:&quot;margin-top: -10px;&quot;}]]"></style></div></div></section><div class="discovery-stream ds-layout"><div class="ds-column ds-column-12"><div class="ds-column-grid"><div></div></div></div><style data-styles="[[null]]"></style></div></div></main><aside></aside></div></div>
+    </div>
+    <div id="footer-asrouter-container" role="presentation"></div>
+    <script src="about:home?jscache"></script>
+    <script async type="module" src="chrome://global/content/elements/moz-toggle.mjs"></script>
+  </body>
+</html>
+window.__FROM_STARTUP_CACHE__ = true;
+window.__STARTUP_STATE__ = {
+	"TopSites": {
+		"initialized": true,
+		"rows": [
+			{
+				"isDefault": true,
+				"url": "https://www.amazon.es/?tag=admarketpl0c0-21&ref=pd_sl_da5dc71fd5b3c49a2088d7fc24ba8da2317e6ce710bec5aa107e0de2&mfadid=adm",
+				"hostname": "amazon",
+				"sendAttributionRequest": false,
+				"label": "Amazon",
+				"show_sponsored_label": true,
+				"sponsored_position": 1,
+				"sponsored_click_url": "https://bridge.sfo1.admarketplace.net/ctp?version=1.0.0&encp=jnEYxmwVJQkX5QbUftINI%3DwqgClnxGEkgClrfZqk4pxZfCDm4ZDnHnwqI%3DEYD%3DcYHFdZgF49DnIQfRNnFqjcfEv9CC44EdvoCwj7swwPDCEIElwrCk3%2FikaYFnv4iw7vFE3%2FidwDBGv4E%3D3TCnd1Jl_P3GjIJEISCwj%3DildD2C4iEl7oFw377ReOgClWftaW7REkiCkm7RERiCkY7ndZj9eKiF3agCbnirjvIpkZ4CxXfCLY4ZfnxGEwxRwvIpkX4pLZ1C2_4Qbm4CDYfQbrfZHnJG4kjpkW7R7kHnWzIncTxmDnx93kiF2zftIqx%3D4vIpkW7ncWfZd13clXCw3cjldCf9wfEclWCw3EslXCfpefElEaCc3cjldCf934swErCD3TIq_PEGjgEllnHr3_iF2zfCqnHr7wiF2z1pbk1BIWJ%3DwqgClWfpxnI94WHnwqgClWfCqnI94WHF3miF2zfCbW1BIqxreNjF3miF2z4QHWfYIqxrevJmwqgClk4ZxnHF3ZJ%3DwqgClk1pf_4pqmfpHafp2WfZlr1tIZJ%3DzkJREugClnIF_EDqWzClNefmIFE%3DLaEZIUxDuFC94wCwckjrfrDBDY3qdwCGH_CklwfqI8xpe3BkvgCkugBnXks%3DzrBZHr4%3DN61E4Eiq8dIqkwfqI83RIHI%3DdGHnXciZNOE98ripNeHZwBfnXZsEqwfqIQClIdDZE5jnxZ3Cbwfq7d1c752r7OHDdGxQeiI%3D7Psn3RCRIlCmHXHkEdjEe2fwEtiqxk4k7rC9eP3mcdEqEaDQepIqDrEDwmCnaZ2nuRJYDY3nuBJdeW4ndX4lzesG%2FrCc%2FZjGIo7R7kJrfz6QTS1Y%2FM6OIviFfz5ClM5ClM5ClM5ClM5ClnHrbzftaZ4pbW5pbTfCbkfBWW5pbTfCbW4YWT5tWTj%3DwTIG4W5%3D7NHmuniFXTGm4VJn3dHmwmI2yy",
+				"sponsored_impression_url": "https://imp.mt48.net/static?id=7RHzfOIXjFEYsBdvIpkX4pLZ1C2%2B4Qbm4CDYfQbrfZHnj9wWIBdvIpkY7n4YIFckiGIw5FwqgCLW4pqnx%3DXNHmEuIF%2Bk5FwqgClWfpxnHF2uxmETIF4kiFzU5FwqgClk1pf%2B4pqmfpHafp2WfZlr1tIZJ%3Dzk5F%2BdJF7wxQkX",
+				"sponsored_tile_id": 74357,
+				"partner": "amp",
+				"favicon": "https://ads-img.mozilla.org/v1/images?image_data=CnAKbmh0dHBzOi8vYW1wLWFzc2V0LjQ1dHUxYzAuY29tL2Fzc2V0cy8xMDA5L2I2MmM2ZjY0ZWEzY2ExZTFjMmQzMzcwMWZkYmQzMmE0MzllMzRmNDJlZGY5MDQwYTAzNjIwYjg3MDc1NDU1MDguanBnEiCoCsoQw36V5WNmQ0vWqhmhvIgqspGFNqJ3OVrxYFABxg",
+				"faviconSize": 200,
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://temuaffiliateprogram.pxf.io/Jz52V7?subId1=148394960655220736&mfadid=adm",
+				"hostname": "temuaffiliateprogram.pxf",
+				"sendAttributionRequest": false,
+				"label": "Temu",
+				"show_sponsored_label": true,
+				"sponsored_position": 2,
+				"sponsored_click_url": "https://bridge.sfo1.admarketplace.net/ctp?version=1.0.0&encp=jnEYxmwVJQkX5QbUftINI%3DwqgC8nxGEkgClrfZqk4pxZfCDm4ZDnHnwqI%3DEYD%3DcYHFdZgDdDDC34snTWCd3Ijk_SECc4iqwrCRv4fOIWHQkXfpbUftIdj%3Dqz4OIdImqzfOIuxr3WGmwqspkW7nuriF2zfZDa1pxYfZ2k7RcdIG7_iF2zfC2afZqk1CHW4QDdfQ8W4Zfm7ndZj92zftIYj%3D7TgFINJ94w7Rekj%3DwqgCbnI9eQiF2zftIQj9wvIpkX1BIQxnEvIpkXfp2ZfBIWJ%3DwqgClWfpxnI94WHnwqgClk4ZbnI94WHF3miF2zfC2ZfBIqxreNjF3miF2z1p8d4YIqxrevJmwqgClZ4pfnHF3ZJ%3DwqgClk1pf_4pqmfpHafp2WfZDX1BIZJ%3DzkJREugC8nIF_EDqWzClNefmIFE%3DLaEZII4GEQir2wfq7%2FsCDkJD7fEZcQ3ld9invl3EEeHGwmxq4EBnwRfr7uf9qZCFwBIn7REC7CjGIUjZc7fnNH3nN3DG38sGwkHqI%3DEdqZCkuF3d4U2D8djFvIDDN6ED2rikcaIrjcCRNZCCLdE%3D_rjZ7i2kco1lxk3tIYj%3DzZgB%2FM6QTS1Y%2FniFwQgBkX1YkX1YkX1YkX1YkX7n4WgCbUfClaftWW5p8_fp8TftWW5plWfpxT5tWT593vJ%3DEZxtXOHF4oInwTJczQJm_qjF4vjnDy",
+				"sponsored_impression_url": "https://imp.mt48.net/static?id=7RHzfOIXjFEYsBdvIpkX4pLZ1C2%2B4Qbm4CDYfQbrfZHnj9wWIBdvIpkY7n4YIFckiGIw5FwqgClW4pfX7ReTHF4wJFEUjtdvIpkXfpbr7ncq5G4wJ%3DEQj%3DwVJOdvIpkX4pLZ1C2%2B4Qbm1pbkfpfdfCqnxmXVjtdUjFdOIG8zfLyy",
+				"sponsored_tile_id": 75169,
+				"partner": "amp",
+				"favicon": "https://ads-img.mozilla.org/v1/images?image_data=CnAKbmh0dHBzOi8vYW1wLWFzc2V0LjQ1dHUxYzAuY29tL2Fzc2V0cy8xNDMxL2UxYjMxOGJkNDkzNDYyN2Q3MjZkNTFmOWM1ZDQyNTVjZWFhNjI0MWRkYmY4M2RmMDE5MGUyMjBiN2E4MWUyODUuanBnEiCF1FoJ1nRR2YvYgV1umBhTKA482BKOK56b6gVGpg0XUQ",
+				"faviconSize": 200,
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.adidas.es?utm_source=admarketplace&utm_medium=SEM&utm_campaign=ES%20CPQV&utm_content=e148394960655220736&cm_mmc=AdieSEM_adMarketplace-_-ES%20CPQV-_-ES%20Privacy-_-privacy+es-_-148394960655220736&cm_mmca1=ES&cm_mmca2=Exact&ds_kid=_dstrackerid&mfadid=adm",
+				"hostname": "adidas",
+				"sendAttributionRequest": false,
+				"label": "Adidas",
+				"show_sponsored_label": true,
+				"sponsored_position": 3,
+				"sponsored_click_url": "https://bridge.sfo1.admarketplace.net/ctp?version=1.0.0&encp=jnEYxmwVJQkX5QbUftINI%3DwqgCfnxGEkgClrfZqk4pxZfCDm4ZDnHnwqI%3DEYD%3DcYHFdZgDdDDC34snTWCd3Ijk_SECc4iqwrCRv4fOIWHQkXfpbUftIdj%3Dqz4OIdImqzfOIuxr3WGmwqspkW7nuriF2zfZDrfpDW4ZDX7RcdIG7_iF2zfC2afZqk1CHW4QDdfQ8W4Zfm7ndZj92zftIYj%3D7TgFINJ94w7Rekj%3DwqgCbnI9eQiF2zftIQj9wvIpkX1BIQxnEvIpkm1p2X7ReTiF2zfCbW4YIqxreOiF2zfCbX4YIqxreNI9IvIpkXfpbZ7n3Zx%3DcdI9IvIpkd4QHZ7n3Zx%3DwViF2zfC2X4tINI94TiF2zfC2afZqk1CHW4QLW4pbZfClX7R4TJr3UjFkzfYIwJwEBCpdfBllZIwIDipNG4%3D_CDGwn2FzGxZ8W7C7tBCI74Z71CwDYidw8CqHdE%3DdfJwq_ICwP2C74fcjH1EEFFGqmIqvQ49jafrHwfq7kIEceIDI3xr4QfdqmHrEpCkwPDwEoxd7VJnzqfr8ZCYDY2RE6HZHXIp393djl1DXUE%3DDXjdqYxl3XClwCjZENxGlwfqInID4lsE78sGwkHqI%3DEdqZ3947EEe5fn4dJqE%3DJBDY2Qwv3dEUJcqZBp3W4ZN1HGIDClvHscv27C7tf%3D_O4G4uB%3DveDpjUC9lXFGbaEdbXIr3g3qLrCkXYBqLajdek3pxrEQqr1949E%3D4NBQ7E7C7%3D2RwGsDX6jmN6xwNXBlupxdwf3ZEQfRNnEdNZFqIZJZ354dEP4mdWjZES2FxkDwv7CqjBIpbmFpc8DrEZ4%3DIIx%3DfrC%3DE%2Fjp8aHGj_IqjR19vU2FuVsR3vCYDY3QIO2q3G4ZIHfQErFBDY3ODY3ODY3n3vHBDY3R487C7tHC31jwbX2mues%3DlwfqHYikxYjpxdHE3Wj%3Dxwfk2wfk2nxR3VxZkS1Y%2FM6QTS7nwvHZkufCTufCTufCTufCTufBIQxpkW5QlZfpbTftWYfZHX5pbTftWXfpbr5tWT5tXkiFXwxrbTHncQimIvJ%3DXKHmzUI9EQiGIw",
+				"sponsored_impression_url": "https://imp.mt48.net/static?id=7RHzfOIXjFEYsBdvIpkX4pLZ1C2%2B4Qbm4CDYfQbrfZHnj9wWIBdvIpkY7n4YIFckiGIw5FwqgCHa4plnx%3DXNHmEuIF%2Bk5FwqgClWfpxnHF2uxmETIF4kiFzU5FwqgClk1pf%2B4pqmfpHafp2WfZlXfBIZJ%3Dzk5F%2BdJF7wxQkZ",
+				"sponsored_tile_id": 74633,
+				"partner": "amp",
+				"favicon": "https://ads-img.mozilla.org/v1/images?image_data=CnAKbmh0dHBzOi8vYW1wLWFzc2V0LjQ1dHUxYzAuY29tL2Fzc2V0cy8xMDAzL2ZiYThlNDA5ZTE4ZTA2MDM4ZTZlNWY0MWNmY2NlNGJkNDdhMTQ2YzIyYTg1Njk3Yjk5YmI0N2RmNzJiNGNlYjcuSlBHEiAsPmC4Vkxrq4aSEPS-RCvZzpQRna0Ay1sC2KFkQb6_Pg",
+				"faviconSize": 200,
+				"typedBonus": true
+			},
+			{
+				"bookmarkGuid": null,
+				"frecency": 2000,
+				"guid": "JiTrndzAWxzY",
+				"lastVisitDate": 1739450512226,
+				"title": "Apache2 Ubuntu Default Page: It works",
+				"url": "http://10.0.2.15/",
+				"type": "history",
+				"screenshot": "moz-page-thumb://thumbnails/?url=http%3A%2F%2F10.0.2.15%2F&revision=5197",
+				"hostname": "10.0.2.15",
+				"typedBonus": true
+			},
+			{
+				"bookmarkGuid": null,
+				"frecency": 2000,
+				"guid": "h44vdQYUp_Kn",
+				"lastVisitDate": 1739450145970,
+				"title": "Apache2 Ubuntu Default Page: It works",
+				"url": "http://localhost/",
+				"type": "history",
+				"screenshot": "moz-page-thumb://thumbnails/?url=http%3A%2F%2Flocalhost%2F&revision=6706",
+				"hostname": "localhost",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.youtube.com/",
+				"hostname": "youtube",
+				"sendAttributionRequest": false,
+				"label": "YouTube",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/youtube-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/youtube-com.png",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.facebook.com/",
+				"hostname": "facebook",
+				"sendAttributionRequest": false,
+				"label": "Facebook",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/facebook-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/facebook-com.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.wikipedia.org/",
+				"hostname": "wikipedia",
+				"sendAttributionRequest": false,
+				"label": "Wikipedia",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/wikipedia-org.ico",
+				"typedBonus": true
+			}
+		],
+		"editForm": null,
+		"showSearchShortcutsForm": false,
+		"searchShortcuts": [
+			{
+				"keyword": "@google",
+				"shortURL": "google",
+				"url": "https://google.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/google-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/google-com.ico"
+			},
+			{
+				"keyword": "@bing",
+				"shortURL": "bing",
+				"url": "https://bing.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/bing-com@2x.svg",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/bing-com.ico"
+			},
+			{
+				"keyword": "@duckduckgo",
+				"shortURL": "duckduckgo",
+				"url": "https://duckduckgo.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/duckduckgo-com@2x.svg",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/duckduckgo-com.ico"
+			},
+			{
+				"keyword": "@ebay",
+				"shortURL": "ebay",
+				"url": "https://ebay.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/ebay@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/ebay.ico"
+			},
+			{
+				"keyword": "@wikipedia",
+				"shortURL": "wikipedia",
+				"url": "https://wikipedia.org",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/wikipedia-org.ico"
+			}
+		],
+		"sov": {
+			"ready": true,
+			"positions": [
+				{
+					"position": 1,
+					"assignedPartner": "amp"
+				},
+				{
+					"position": 2,
+					"assignedPartner": "amp"
+				},
+				{
+					"position": 3,
+					"assignedPartner": "amp"
+				}
+			]
+		},
+		"pref": {
+			"collapsed": false
+		}
+	},
+	"App": {
+		"initialized": true,
+		"locale": "es-ES",
+		"isForStartupCache": true,
+		"customizeMenuVisible": false,
+		"links": [
+			{
+				"isDefault": true,
+				"url": "https://www.amazon.es/?tag=admarketpl0c0-21&ref=pd_sl_da5dc71fd5b3c49a2088d7fc24ba8da2317e6ce710bec5aa107e0de2&mfadid=adm",
+				"hostname": "amazon",
+				"sendAttributionRequest": false,
+				"label": "Amazon",
+				"show_sponsored_label": true,
+				"sponsored_position": 1,
+				"sponsored_click_url": "https://bridge.sfo1.admarketplace.net/ctp?version=1.0.0&encp=jnEYxmwVJQkX5QbUftINI%3DwqgClnxGEkgClrfZqk4pxZfCDm4ZDnHnwqI%3DEYD%3DcYHFdZgF49DnIQfRNnFqjcfEv9CC44EdvoCwj7swwPDCEIElwrCk3%2FikaYFnv4iw7vFE3%2FidwDBGv4E%3D3TCnd1Jl_P3GjIJEISCwj%3DildD2C4iEl7oFw377ReOgClWftaW7REkiCkm7RERiCkY7ndZj9eKiF3agCbnirjvIpkZ4CxXfCLY4ZfnxGEwxRwvIpkX4pLZ1C2_4Qbm4CDYfQbrfZHnJG4kjpkW7R7kHnWzIncTxmDnx93kiF2zftIqx%3D4vIpkW7ncWfZd13clXCw3cjldCf9wfEclWCw3EslXCfpefElEaCc3cjldCf934swErCD3TIq_PEGjgEllnHr3_iF2zfCqnHr7wiF2z1pbk1BIWJ%3DwqgClWfpxnI94WHnwqgClWfCqnI94WHF3miF2zfCbW1BIqxreNjF3miF2z4QHWfYIqxrevJmwqgClk4ZxnHF3ZJ%3DwqgClk1pf_4pqmfpHafp2WfZlr1tIZJ%3DzkJREugClnIF_EDqWzClNefmIFE%3DLaEZIUxDuFC94wCwckjrfrDBDY3qdwCGH_CklwfqI8xpe3BkvgCkugBnXks%3DzrBZHr4%3DN61E4Eiq8dIqkwfqI83RIHI%3DdGHnXciZNOE98ripNeHZwBfnXZsEqwfqIQClIdDZE5jnxZ3Cbwfq7d1c752r7OHDdGxQeiI%3D7Psn3RCRIlCmHXHkEdjEe2fwEtiqxk4k7rC9eP3mcdEqEaDQepIqDrEDwmCnaZ2nuRJYDY3nuBJdeW4ndX4lzesG%2FrCc%2FZjGIo7R7kJrfz6QTS1Y%2FM6OIviFfz5ClM5ClM5ClM5ClM5ClnHrbzftaZ4pbW5pbTfCbkfBWW5pbTfCbW4YWT5tWTj%3DwTIG4W5%3D7NHmuniFXTGm4VJn3dHmwmI2yy",
+				"sponsored_impression_url": "https://imp.mt48.net/static?id=7RHzfOIXjFEYsBdvIpkX4pLZ1C2%2B4Qbm4CDYfQbrfZHnj9wWIBdvIpkY7n4YIFckiGIw5FwqgCLW4pqnx%3DXNHmEuIF%2Bk5FwqgClWfpxnHF2uxmETIF4kiFzU5FwqgClk1pf%2B4pqmfpHafp2WfZlr1tIZJ%3Dzk5F%2BdJF7wxQkX",
+				"sponsored_tile_id": 74357,
+				"partner": "amp",
+				"favicon": "https://ads-img.mozilla.org/v1/images?image_data=CnAKbmh0dHBzOi8vYW1wLWFzc2V0LjQ1dHUxYzAuY29tL2Fzc2V0cy8xMDA5L2I2MmM2ZjY0ZWEzY2ExZTFjMmQzMzcwMWZkYmQzMmE0MzllMzRmNDJlZGY5MDQwYTAzNjIwYjg3MDc1NDU1MDguanBnEiCoCsoQw36V5WNmQ0vWqhmhvIgqspGFNqJ3OVrxYFABxg",
+				"faviconSize": 200,
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://temuaffiliateprogram.pxf.io/Jz52V7?subId1=148394960655220736&mfadid=adm",
+				"hostname": "temuaffiliateprogram.pxf",
+				"sendAttributionRequest": false,
+				"label": "Temu",
+				"show_sponsored_label": true,
+				"sponsored_position": 2,
+				"sponsored_click_url": "https://bridge.sfo1.admarketplace.net/ctp?version=1.0.0&encp=jnEYxmwVJQkX5QbUftINI%3DwqgC8nxGEkgClrfZqk4pxZfCDm4ZDnHnwqI%3DEYD%3DcYHFdZgDdDDC34snTWCd3Ijk_SECc4iqwrCRv4fOIWHQkXfpbUftIdj%3Dqz4OIdImqzfOIuxr3WGmwqspkW7nuriF2zfZDa1pxYfZ2k7RcdIG7_iF2zfC2afZqk1CHW4QDdfQ8W4Zfm7ndZj92zftIYj%3D7TgFINJ94w7Rekj%3DwqgCbnI9eQiF2zftIQj9wvIpkX1BIQxnEvIpkXfp2ZfBIWJ%3DwqgClWfpxnI94WHnwqgClk4ZbnI94WHF3miF2zfC2ZfBIqxreNjF3miF2z1p8d4YIqxrevJmwqgClZ4pfnHF3ZJ%3DwqgClk1pf_4pqmfpHafp2WfZDX1BIZJ%3DzkJREugC8nIF_EDqWzClNefmIFE%3DLaEZII4GEQir2wfq7%2FsCDkJD7fEZcQ3ld9invl3EEeHGwmxq4EBnwRfr7uf9qZCFwBIn7REC7CjGIUjZc7fnNH3nN3DG38sGwkHqI%3DEdqZCkuF3d4U2D8djFvIDDN6ED2rikcaIrjcCRNZCCLdE%3D_rjZ7i2kco1lxk3tIYj%3DzZgB%2FM6QTS1Y%2FniFwQgBkX1YkX1YkX1YkX1YkX7n4WgCbUfClaftWW5p8_fp8TftWW5plWfpxT5tWT593vJ%3DEZxtXOHF4oInwTJczQJm_qjF4vjnDy",
+				"sponsored_impression_url": "https://imp.mt48.net/static?id=7RHzfOIXjFEYsBdvIpkX4pLZ1C2%2B4Qbm4CDYfQbrfZHnj9wWIBdvIpkY7n4YIFckiGIw5FwqgClW4pfX7ReTHF4wJFEUjtdvIpkXfpbr7ncq5G4wJ%3DEQj%3DwVJOdvIpkX4pLZ1C2%2B4Qbm1pbkfpfdfCqnxmXVjtdUjFdOIG8zfLyy",
+				"sponsored_tile_id": 75169,
+				"partner": "amp",
+				"favicon": "https://ads-img.mozilla.org/v1/images?image_data=CnAKbmh0dHBzOi8vYW1wLWFzc2V0LjQ1dHUxYzAuY29tL2Fzc2V0cy8xNDMxL2UxYjMxOGJkNDkzNDYyN2Q3MjZkNTFmOWM1ZDQyNTVjZWFhNjI0MWRkYmY4M2RmMDE5MGUyMjBiN2E4MWUyODUuanBnEiCF1FoJ1nRR2YvYgV1umBhTKA482BKOK56b6gVGpg0XUQ",
+				"faviconSize": 200,
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.adidas.es?utm_source=admarketplace&utm_medium=SEM&utm_campaign=ES%20CPQV&utm_content=e148394960655220736&cm_mmc=AdieSEM_adMarketplace-_-ES%20CPQV-_-ES%20Privacy-_-privacy+es-_-148394960655220736&cm_mmca1=ES&cm_mmca2=Exact&ds_kid=_dstrackerid&mfadid=adm",
+				"hostname": "adidas",
+				"sendAttributionRequest": false,
+				"label": "Adidas",
+				"show_sponsored_label": true,
+				"sponsored_position": 3,
+				"sponsored_click_url": "https://bridge.sfo1.admarketplace.net/ctp?version=1.0.0&encp=jnEYxmwVJQkX5QbUftINI%3DwqgCfnxGEkgClrfZqk4pxZfCDm4ZDnHnwqI%3DEYD%3DcYHFdZgDdDDC34snTWCd3Ijk_SECc4iqwrCRv4fOIWHQkXfpbUftIdj%3Dqz4OIdImqzfOIuxr3WGmwqspkW7nuriF2zfZDrfpDW4ZDX7RcdIG7_iF2zfC2afZqk1CHW4QDdfQ8W4Zfm7ndZj92zftIYj%3D7TgFINJ94w7Rekj%3DwqgCbnI9eQiF2zftIQj9wvIpkX1BIQxnEvIpkm1p2X7ReTiF2zfCbW4YIqxreOiF2zfCbX4YIqxreNI9IvIpkXfpbZ7n3Zx%3DcdI9IvIpkd4QHZ7n3Zx%3DwViF2zfC2X4tINI94TiF2zfC2afZqk1CHW4QLW4pbZfClX7R4TJr3UjFkzfYIwJwEBCpdfBllZIwIDipNG4%3D_CDGwn2FzGxZ8W7C7tBCI74Z71CwDYidw8CqHdE%3DdfJwq_ICwP2C74fcjH1EEFFGqmIqvQ49jafrHwfq7kIEceIDI3xr4QfdqmHrEpCkwPDwEoxd7VJnzqfr8ZCYDY2RE6HZHXIp393djl1DXUE%3DDXjdqYxl3XClwCjZENxGlwfqInID4lsE78sGwkHqI%3DEdqZ3947EEe5fn4dJqE%3DJBDY2Qwv3dEUJcqZBp3W4ZN1HGIDClvHscv27C7tf%3D_O4G4uB%3DveDpjUC9lXFGbaEdbXIr3g3qLrCkXYBqLajdek3pxrEQqr1949E%3D4NBQ7E7C7%3D2RwGsDX6jmN6xwNXBlupxdwf3ZEQfRNnEdNZFqIZJZ354dEP4mdWjZES2FxkDwv7CqjBIpbmFpc8DrEZ4%3DIIx%3DfrC%3DE%2Fjp8aHGj_IqjR19vU2FuVsR3vCYDY3QIO2q3G4ZIHfQErFBDY3ODY3ODY3n3vHBDY3R487C7tHC31jwbX2mues%3DlwfqHYikxYjpxdHE3Wj%3Dxwfk2wfk2nxR3VxZkS1Y%2FM6QTS7nwvHZkufCTufCTufCTufCTufBIQxpkW5QlZfpbTftWYfZHX5pbTftWXfpbr5tWT5tXkiFXwxrbTHncQimIvJ%3DXKHmzUI9EQiGIw",
+				"sponsored_impression_url": "https://imp.mt48.net/static?id=7RHzfOIXjFEYsBdvIpkX4pLZ1C2%2B4Qbm4CDYfQbrfZHnj9wWIBdvIpkY7n4YIFckiGIw5FwqgCHa4plnx%3DXNHmEuIF%2Bk5FwqgClWfpxnHF2uxmETIF4kiFzU5FwqgClk1pf%2B4pqmfpHafp2WfZlXfBIZJ%3Dzk5F%2BdJF7wxQkZ",
+				"sponsored_tile_id": 74633,
+				"partner": "amp",
+				"favicon": "https://ads-img.mozilla.org/v1/images?image_data=CnAKbmh0dHBzOi8vYW1wLWFzc2V0LjQ1dHUxYzAuY29tL2Fzc2V0cy8xMDAzL2ZiYThlNDA5ZTE4ZTA2MDM4ZTZlNWY0MWNmY2NlNGJkNDdhMTQ2YzIyYTg1Njk3Yjk5YmI0N2RmNzJiNGNlYjcuSlBHEiAsPmC4Vkxrq4aSEPS-RCvZzpQRna0Ay1sC2KFkQb6_Pg",
+				"faviconSize": 200,
+				"typedBonus": true
+			},
+			{
+				"bookmarkGuid": null,
+				"frecency": 2000,
+				"guid": "JiTrndzAWxzY",
+				"lastVisitDate": 1739450512226,
+				"title": "Apache2 Ubuntu Default Page: It works",
+				"url": "http://10.0.2.15/",
+				"type": "history",
+				"screenshot": "moz-page-thumb://thumbnails/?url=http%3A%2F%2F10.0.2.15%2F&revision=5197",
+				"hostname": "10.0.2.15",
+				"typedBonus": true
+			},
+			{
+				"bookmarkGuid": null,
+				"frecency": 2000,
+				"guid": "h44vdQYUp_Kn",
+				"lastVisitDate": 1739450145970,
+				"title": "Apache2 Ubuntu Default Page: It works",
+				"url": "http://localhost/",
+				"type": "history",
+				"screenshot": "moz-page-thumb://thumbnails/?url=http%3A%2F%2Flocalhost%2F&revision=6706",
+				"hostname": "localhost",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.youtube.com/",
+				"hostname": "youtube",
+				"sendAttributionRequest": false,
+				"label": "YouTube",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/youtube-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/youtube-com.png",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.facebook.com/",
+				"hostname": "facebook",
+				"sendAttributionRequest": false,
+				"label": "Facebook",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/facebook-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/facebook-com.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.wikipedia.org/",
+				"hostname": "wikipedia",
+				"sendAttributionRequest": false,
+				"label": "Wikipedia",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/wikipedia-org.ico",
+				"typedBonus": true
+			}
+		],
+		"pref": {
+			"collapsed": false
+		}
+	},
+	"Prefs": {
+		"initialized": true,
+		"values": {
+			"default.sites": "https://www.youtube.com/,https://www.facebook.com/,https://www.wikipedia.org/,https://www.reddit.com/,https://www.amazon.com/,https://twitter.com/",
+			"feeds.section.topstories.options": "{\"api_key_pref\":\"extensions.pocket.oAuthConsumerKey\",\"hidden\":false,\"provider_icon\":\"chrome://global/skin/icons/pocket.svg\",\"provider_name\":\"Pocket\",\"read_more_endpoint\":\"https://getpocket.com/explore/trending?src=fx_new_tab\",\"stories_endpoint\":\"https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&consumer_key=$apiKey&locale_lang=es-ES&feed_variant=default_spocs_on\",\"stories_referrer\":\"https://getpocket.com/recommendations\",\"topics_endpoint\":\"https://getpocket.cdn.mozilla.net/v3/firefox/trending-topics?version=2&consumer_key=$apiKey&locale_lang=es-ES\",\"show_spocs\":true}",
+			"feeds.topsites": true,
+			"hideTopSitesTitle": false,
+			"showSponsored": true,
+			"system.showSponsored": true,
+			"showSponsoredTopSites": true,
+			"system.showWeather": false,
+			"showWeather": true,
+			"weather.query": "",
+			"weather.locationSearchEnabled": true,
+			"weather.temperatureUnits": "c",
+			"weather.display": "simple",
+			"pocketCta": "{\"cta_button\":\"\",\"cta_text\":\"\",\"cta_url\":\"\",\"use_cta\":false}",
+			"showSearch": true,
+			"topSitesRows": 1,
+			"telemetry": true,
+			"telemetry.ut.events": false,
+			"telemetry.structuredIngestion.endpoint": "https://incoming.telemetry.mozilla.org/submit",
+			"section.highlights.includeVisited": true,
+			"section.highlights.includeBookmarks": true,
+			"section.highlights.includePocket": true,
+			"section.highlights.includeDownloads": true,
+			"section.highlights.rows": 1,
+			"section.topstories.rows": 1,
+			"sectionOrder": "topsites,topstories,highlights",
+			"newtabWallpapers.enabled": false,
+			"newtabWallpapers.v2.enabled": false,
+			"newtabWallpapers.highlightEnabled": false,
+			"newtabWallpapers.highlightDismissed": false,
+			"newtabWallpapers.highlightSeenCounter": 0,
+			"newtabWallpapers.highlightHeaderText": "",
+			"newtabWallpapers.highlightContentText": "",
+			"newtabWallpapers.highlightCtaText": "",
+			"newtabWallpapers.wallpaper-light": "",
+			"newtabWallpapers.wallpaper-dark": "",
+			"newtabWallpapers.wallpaper": "",
+			"improvesearch.noDefaultSearchTile": true,
+			"improvesearch.topSiteSearchShortcuts.searchEngines": "google",
+			"improvesearch.topSiteSearchShortcuts.havePinned": "",
+			"asrouter.devtoolsEnabled": false,
+			"discoverystream.flight.blocks": "{}",
+			"discoverystream.config": "{\"api_key_pref\":\"extensions.pocket.oAuthConsumerKey\",\"collapsible\":true,\"enabled\":true}",
+			"discoverystream.endpoints": "https://getpocket.cdn.mozilla.net/,https://firefox-api-proxy.cdn.mozilla.net/,https://spocs.getpocket.com/,https://merino.services.mozilla.com/",
+			"discoverystream.isCollectionDismissible": true,
+			"discoverystream.onboardingExperience.dismissed": false,
+			"discoverystream.thumbsUpDown.enabled": false,
+			"discoverystream.thumbsUpDown.searchTopsitesCompact": false,
+			"discoverystream.region-basic-layout": false,
+			"discoverystream.spoc.impressions": "{}",
+			"discoverystream.endpointSpocsClear": "https://spocs.getpocket.com/user",
+			"discoverystream.rec.impressions": "{\"2189815015036747\":1739450502540,\"4959580610954710\":1739450502541,\"5808118095357320\":1739450502542}",
+			"discoverystream.topicSelection.enabled": false,
+			"showRecentSaves": true,
+			"feeds.aboutpreferences": true,
+			"feeds.newtabinit": true,
+			"feeds.places": true,
+			"feeds.prefs": true,
+			"feeds.sections": true,
+			"feeds.section.highlights": false,
+			"feeds.system.topstories": true,
+			"feeds.systemtick": true,
+			"feeds.telemetry": true,
+			"feeds.favicon": true,
+			"feeds.system.topsites": true,
+			"feeds.recommendationprovider": true,
+			"feeds.discoverystreamfeed": true,
+			"feeds.wallpaperfeed": true,
+			"feeds.weatherfeed": true,
+			"isPrivateBrowsingEnabled": true,
+			"platform": "linux",
+			"region": "ES",
+			"fxa_endpoint": "https://accounts.firefox.com/",
+			"appUpdateChannel": "release",
+			"improvesearch.topSiteSearchShortcuts": true,
+			"mayHaveSponsoredTopSites": true,
+			"improvesearch.handoffToAwesomebar": true,
+			"featureConfig": {
+				"customizationMenuEnabled": null,
+				"topSitesContileEnabled": true
+			},
+			"pocketConfig": {
+				"spocPositions": "1,5,7,11,18,20",
+				"spocTopsitesPositions": "2",
+				"contileTopsitesPositions": "0,1,2",
+				"spocAdTypes": "",
+				"spocZoneIds": "",
+				"spocTopsitesAdTypes": "",
+				"spocTopsitesZoneIds": "",
+				"spocTopsitesPlacementEnabled": true,
+				"spocSiteId": "",
+				"widgetPositions": "",
+				"hybridLayout": false,
+				"hideCardBackground": false,
+				"fourCardLayout": false,
+				"newFooterSection": false,
+				"saveToPocketCard": true,
+				"saveToPocketCardRegions": "",
+				"hideDescriptions": false,
+				"hideDescriptionsRegions": "",
+				"compactGrid": false,
+				"compactImages": false,
+				"imageGradient": false,
+				"titleLines": 3,
+				"descLines": 3,
+				"onboardingExperience": false,
+				"essentialReadsHeader": false,
+				"editorsPicksHeader": false,
+				"recentSavesEnabled": false,
+				"readTime": true,
+				"newSponsoredLabel": false,
+				"sendToPocket": true,
+				"recsPersonalized": false,
+				"spocsPersonalized": true,
+				"topicSelectionEnabled": false,
+				"spocsCacheTimeout": null,
+				"ctaButtonSponsors": "",
+				"ctaButtonVariant": "",
+				"spocMessageVariant": "",
+				"regionStoriesConfig": "US,DE,CA,GB,IE,CH,AT,BE,IN,FR,IT,ES",
+				"regionBffConfig": "US,DE,CA,GB,IE,CH,AT,BE,IN,FR,IT,ES",
+				"merinoProviderEnabled": false,
+				"merinoProviderEndpoint": "merino.services.mozilla.com",
+				"regionStoriesBlock": "",
+				"localeListConfig": "",
+				"regionSpocsConfig": "US,CA,DE,GB,FR,IT,ES",
+				"regionWeatherConfig": "",
+				"localeWeatherConfig": "en-US,en-GB,en-CA",
+				"topSitesContileSovEnabled": true,
+				"pocketFeedParameters": ""
+			},
+			"logowordmark.alwaysVisible": true,
+			"feeds.section.topstories": true,
+			"discoverystream.enabled": true,
+			"discoverystream.sponsored-collections.enabled": false,
+			"discoverystream.hardcoded-basic-layout": false,
+			"discoverystream.personalization.enabled": true,
+			"discoverystream.personalization.override": false,
+			"discoverystream.personalization.modelKeys": "nb_model_arts_and_entertainment, nb_model_autos_and_vehicles, nb_model_beauty_and_fitness, nb_model_blogging_resources_and_services, nb_model_books_and_literature, nb_model_business_and_industrial, nb_model_computers_and_electronics, nb_model_finance, nb_model_food_and_drink, nb_model_games, nb_model_health, nb_model_hobbies_and_leisure, nb_model_home_and_garden, nb_model_internet_and_telecom, nb_model_jobs_and_education, nb_model_law_and_government, nb_model_online_communities, nb_model_people_and_society, nb_model_pets_and_animals, nb_model_real_estate, nb_model_reference, nb_model_science, nb_model_shopping, nb_model_sports, nb_model_travel",
+			"discoverystream.spocs-endpoint": "",
+			"discoverystream.spocs-endpoint-query": "",
+			"newNewtabExperience.colors": "#0090ED,#FF4F5F,#2AC3A2,#FF7139,#A172FF,#FFA437,#FF2A8A"
+		}
+	},
+	"Dialog": {
+		"visible": false,
+		"data": {}
+	},
+	"Sections": [
+		{
+			"title": {
+				"id": "newtab-section-header-stories"
+			},
+			"rows": [],
+			"enabled": true,
+			"id": "topstories",
+			"pref": {
+				"titleString": {
+					"id": "home-prefs-recommended-by-header-generic"
+				},
+				"descString": {
+					"id": "home-prefs-recommended-by-description-generic"
+				},
+				"nestedPrefs": [
+					{
+						"name": "showSponsored",
+						"titleString": "home-prefs-recommended-by-option-sponsored-stories",
+						"icon": "icon-info",
+						"eventSource": "POCKET_SPOCS"
+					}
+				],
+				"learnMore": {
+					"link": {
+						"href": "https://getpocket.com/firefox/new_tab_learn_more",
+						"id": "home-prefs-recommended-by-learn-more"
+					}
+				},
+				"collapsed": false,
+				"feed": "feeds.section.topstories"
+			},
+			"shouldHidePref": false,
+			"eventSource": "TOP_STORIES",
+			"icon": "chrome://global/skin/icons/pocket.svg",
+			"learnMore": {
+				"link": {
+					"href": "https://getpocket.com/firefox/new_tab_learn_more",
+					"message": {
+						"id": "newtab-pocket-learn-more"
+					}
+				}
+			},
+			"compactCards": false,
+			"rowsPref": "section.topstories.rows",
+			"maxRows": 4,
+			"availableLinkMenuOptions": [
+				"CheckBookmarkOrArchive",
+				"CheckSavedToPocket",
+				"Separator",
+				"OpenInNewWindow",
+				"OpenInPrivateWindow",
+				"Separator",
+				"BlockUrl"
+			],
+			"emptyState": {
+				"message": {
+					"id": "newtab-empty-section-topstories-generic"
+				},
+				"icon": "check"
+			},
+			"shouldSendImpressionStats": true,
+			"dedupeFrom": [
+				"highlights"
+			],
+			"options": {
+				"api_key_pref": "extensions.pocket.oAuthConsumerKey",
+				"hidden": false,
+				"provider_icon": "chrome://global/skin/icons/pocket.svg",
+				"provider_name": "Pocket",
+				"read_more_endpoint": "https://getpocket.com/explore/trending?src=fx_new_tab",
+				"stories_endpoint": "https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&consumer_key=$apiKey&locale_lang=es-ES&feed_variant=default_spocs_on",
+				"stories_referrer": "https://getpocket.com/recommendations",
+				"topics_endpoint": "https://getpocket.cdn.mozilla.net/v3/firefox/trending-topics?version=2&consumer_key=$apiKey&locale_lang=es-ES",
+				"show_spocs": true
+			},
+			"contextMenuOptions": [
+				"CheckBookmarkOrArchive",
+				"CheckSavedToPocket",
+				"Separator",
+				"OpenInNewWindow",
+				"OpenInPrivateWindow",
+				"Separator",
+				"BlockUrl"
+			],
+			"initialized": false,
+			"dedupeConfigurations": [
+				{
+					"id": "topstories",
+					"dedupeFrom": [
+						"highlights"
+					]
+				}
+			]
+		},
+		{
+			"title": {
+				"id": "newtab-section-header-recent-activity"
+			},
+			"rows": [],
+			"enabled": false,
+			"id": "highlights",
+			"pref": {
+				"titleString": {
+					"id": "home-prefs-recent-activity-header"
+				},
+				"descString": {
+					"id": "home-prefs-recent-activity-description"
+				},
+				"nestedPrefs": [
+					{
+						"name": "section.highlights.includeVisited",
+						"titleString": "home-prefs-highlights-option-visited-pages"
+					},
+					{
+						"name": "section.highlights.includeBookmarks",
+						"titleString": "home-prefs-highlights-options-bookmarks"
+					},
+					{
+						"name": "section.highlights.includeDownloads",
+						"titleString": "home-prefs-highlights-option-most-recent-download"
+					},
+					{
+						"name": "section.highlights.includePocket",
+						"titleString": "home-prefs-highlights-option-saved-to-pocket",
+						"hidden": false
+					}
+				],
+				"collapsed": false,
+				"feed": "feeds.section.highlights"
+			},
+			"shouldHidePref": false,
+			"eventSource": "HIGHLIGHTS",
+			"icon": "chrome://global/skin/icons/highlights.svg",
+			"compactCards": true,
+			"rowsPref": "section.highlights.rows",
+			"maxRows": 4,
+			"emptyState": {
+				"message": {
+					"id": "newtab-empty-section-highlights"
+				},
+				"icon": "chrome://global/skin/icons/highlights.svg"
+			},
+			"shouldSendImpressionStats": false,
+			"options": {},
+			"initialized": false
+		}
+	],
+	"Notifications": {
+		"showNotifications": false,
+		"toastCounter": 0,
+		"toastId": "",
+		"toastQueue": []
+	},
+	"Pocket": {
+		"isUserLoggedIn": null,
+		"pocketCta": {},
+		"waitingForSpoc": true
+	},
+	"Personalization": {
+		"lastUpdated": null,
+		"initialized": false
+	},
+	"DiscoveryStream": {
+		"config": {
+			"api_key_pref": "extensions.pocket.oAuthConsumerKey",
+			"collapsible": true,
+			"enabled": true
+		},
+		"layout": [
+			{
+				"width": 12,
+				"components": [
+					{
+						"type": "TopSites",
+						"header": {
+							"title": {
+								"id": "newtab-section-header-topsites"
+							}
+						},
+						"placement": {
+							"name": "sponsored-topsites",
+							"ad_types": [
+								3120
+							],
+							"zone_ids": [
+								280143
+							]
+						},
+						"spocs": {
+							"probability": 1,
+							"prefs": [
+								"showSponsoredTopSites"
+							],
+							"positions": [
+								{
+									"index": 2
+								}
+							]
+						},
+						"properties": {}
+					},
+					{
+						"type": "Message",
+						"essentialReadsHeader": false,
+						"editorsPicksHeader": false,
+						"header": {
+							"title": {
+								"id": "newtab-section-header-stories"
+							},
+							"subtitle": "",
+							"link_text": {
+								"id": "newtab-pocket-learn-more"
+							},
+							"link_url": "https://getpocket.com/firefox/new_tab_learn_more",
+							"icon": "chrome://global/skin/icons/pocket.svg"
+						},
+						"properties": {
+							"spocMessageVariant": ""
+						},
+						"styles": {
+							".ds-message": "margin-bottom: -20px"
+						}
+					},
+					{
+						"type": "CardGrid",
+						"properties": {
+							"items": 21,
+							"hybridLayout": false,
+							"hideCardBackground": false,
+							"fourCardLayout": false,
+							"compactGrid": false,
+							"essentialReadsHeader": false,
+							"editorsPicksHeader": false,
+							"onboardingExperience": false,
+							"ctaButtonSponsors": [],
+							"ctaButtonVariant": "",
+							"spocMessageVariant": ""
+						},
+						"widgets": {
+							"positions": [],
+							"data": []
+						},
+						"cta_variant": "link",
+						"header": {
+							"title": ""
+						},
+						"placement": {
+							"name": "spocs",
+							"ad_types": [
+								3617
+							],
+							"zone_ids": [
+								217758,
+								217995
+							]
+						},
+						"feed": {
+							"embed_reference": null,
+							"url": "https://firefox-api-proxy.cdn.mozilla.net/desktop/v1/recommendations?locale=$locale&region=$region&count=30"
+						},
+						"spocs": {
+							"probability": 1,
+							"positions": [
+								{
+									"index": 1
+								},
+								{
+									"index": 5
+								},
+								{
+									"index": 7
+								},
+								{
+									"index": 11
+								},
+								{
+									"index": 18
+								},
+								{
+									"index": 20
+								}
+							]
+						}
+					},
+					{
+						"type": "Navigation",
+						"newFooterSection": false,
+						"properties": {
+							"alignment": "left-align",
+							"links": [
+								{
+									"name": "Self improvement",
+									"url": "https://getpocket.com/explore/self-improvement?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Food",
+									"url": "https://getpocket.com/explore/food?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Entertainment",
+									"url": "https://getpocket.com/explore/entertainment?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Health & fitness",
+									"url": "https://getpocket.com/explore/health?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Science",
+									"url": "https://getpocket.com/explore/science?utm_source=pocket-newtab"
+								},
+								{
+									"name": "More recommendations ›",
+									"url": "https://getpocket.com/explore?utm_source=pocket-newtab"
+								}
+							],
+							"extraLinks": [
+								{
+									"name": "Career",
+									"url": "https://getpocket.com/explore/career?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Technology",
+									"url": "https://getpocket.com/explore/technology?utm_source=pocket-newtab"
+								}
+							],
+							"privacyNoticeURL": {
+								"url": "https://www.mozilla.org/privacy/firefox/#recommend-relevant-content",
+								"title": {
+									"id": "newtab-section-menu-privacy-notice"
+								}
+							}
+						},
+						"header": {
+							"title": {
+								"id": "newtab-pocket-read-more"
+							}
+						},
+						"styles": {
+							".ds-navigation": "margin-top: -10px;"
+						}
+					}
+				]
+			}
+		],
+		"isPrivacyInfoModalVisible": false,
+		"isCollectionDismissible": true,
+		"feeds": {
+			"data": {
+				"https://firefox-api-proxy.cdn.mozilla.net/desktop/v1/recommendations?locale=$locale&region=$region&count=30": {
+					"lastUpdated": 1739450139368,
+					"personalized": false,
+					"data": {
+						"settings": {},
+						"recommendations": [
+							{
+								"id": 2189815015036747,
+								"url": "https://www.nytimes.com/es/2025/02/11/espanol/estados-unidos/ee-uu-ciudadania-nacimiento-wong-kim-ark.html?utm_source=firefox-newtab-es-es",
+								"title": "El hombre que logró que EE. UU. otorgara ciudadanía por nacimiento para todos",
+								"excerpt": "Cuando las autoridades negaron que fuera ciudadano, Wong Kim Ark llevó su caso ante la Corte Suprema y ganó. Hoy, esa decisión es el centro del debate sobre quién puede ser estadounidense.",
+								"publisher": "The New York Times",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/d17c7482-5f88-4e8c-90fb-29eac6414165.jpeg",
+								"recommendation_id": "3c056d37-7147-4d6a-82a6-ba6c80f3509d",
+								"score": 1
+							},
+							{
+								"id": 4959580610954710,
+								"url": "https://www.lavanguardia.com/andro4all/ciencia/llevaba-46-000-anos-congelado-en-el-permafrost-pero-estaba-completamente-vivo-ahora-tiene-la-clave-para-desbloquear-los-misterios-de-la-genetica?utm_source=firefox-newtab-es-es",
+								"title": "Llevaba 46.000 años congelado en el permafrost, pero estaba completamente vivo. Tiene la clave para desbloquear los misterios de la genética",
+								"excerpt": "Un grupo de investigadores del Instituto de Zoología de la Universidad de Colonia (Alemania) han conseguido revivir un pequeño gusano que llevaba congelado decenas de miles de años en el Permafrost siberiano",
+								"publisher": "La Vanguardia",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/861fc1db-2011-4a3c-9883-48d5f6dea904.jpeg",
+								"recommendation_id": "0ef9b64a-674b-421d-8476-d2337d339f3e",
+								"score": 1
+							},
+							{
+								"id": 5808118095357320,
+								"url": "https://www.publico.es/internacional/eeuu/pocos-impuestos-crimenes-osos-calles-decadencia-grafton-experimento-libertario-pueblo-estados-unidos.html?utm_source=firefox-newtab-es-es",
+								"title": "De pocos impuestos a crímenes y osos por las calles: la decadencia de Grafton, el experimento libertario en un pueblo de Estados Unidos",
+								"excerpt": "El pequeño pueblo de Grafton, en Nuevo Hampshire, vivió un experimento que debía conducirle a ser una ciudad completamente libre, desgajada de las obligaciones estatales. Al amparo de las ideas libertarias de muchos de sus vecinos, la cosa terminó con violencia y osos campando alegremente por calles y fincas.",
+								"publisher": "Público",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/d4161e2b-b031-4212-b8dc-024df04b6aee.jpeg",
+								"recommendation_id": "31538460-2128-42ce-bb9e-809032244267",
+								"score": 1
+							},
+							{
+								"id": 6325486834968682,
+								"url": "https://es.euronews.com/viajes/2025/02/09/no-te-quedes-con-positano-los-mejores-secretos-de-la-costa-de-amalfi-para-evitar-las-multi?utm_source=firefox-newtab-es-es",
+								"title": "\"No te quedes solo en Positano\": Los mejores secretos de la costa de Amalfi para evitar multitudes",
+								"excerpt": "Los huéspedes del Hotel Poseidon en Positano aseguran que es impresionante y lujoso, pero Liliana Mascolo, empleada de tercera generación del hotel familiar, siempre lo ha llamado su hogar.",
+								"publisher": "Euronews Español",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/ccecb2aa-8e73-4b0f-acb3-39e7068690b7.jpeg",
+								"recommendation_id": "5c476aef-0b10-45e4-ac32-1f53e997101e",
+								"score": 1
+							},
+							{
+								"id": 2930910760406530,
+								"url": "https://www.nationalgeographicla.com/animales/2025/02/la-ciencia-explica-como-encuentran-los-perros-perdidos-el-camino-de-regreso-a-casa?utm_source=firefox-newtab-es-es",
+								"title": "La ciencia explica cómo encuentran los perros perdidos el camino de regreso a casa",
+								"excerpt": "Descendientes del lobo gris, los perros son capaces de encontrar el camino a casa recorriendo miles de kilómetros de distancia y haciendo uso de mucho más que su olfato.",
+								"publisher": "National Geographic",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/ac0d4552-25ba-41e6-bf8d-807761289152.jpeg",
+								"recommendation_id": "909c053c-c57b-4581-8f13-3e50dd7198f3",
+								"score": 1
+							},
+							{
+								"id": 71718547262098,
+								"url": "https://www.jotdown.es/2025/02/inteligencia-artificial-arquitectura/?utm_source=firefox-newtab-es-es",
+								"title": "Inteligencia artificial en arquitectura: la nueva armonía de función y forma",
+								"excerpt": "La innovación siempre genera dudas y temores. ",
+								"publisher": "Jot Down",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/ce81969a-bf51-4238-822a-285d8c6027b4.jpeg",
+								"recommendation_id": "23b9cbcf-c9ec-4405-98c7-3724ad39fcf2",
+								"score": 1
+							},
+							{
+								"id": 6819865158213167,
+								"url": "https://www.bbc.com/mundo/articles/clyjy5ll6mdo?utm_source=firefox-newtab-es-es",
+								"title": "Qué es el movimiento \"desinfluencer\" y cómo busca cambiar la cultura de las compras excesivas",
+								"excerpt": "En 2019, Diana Wiebe estaba inmersa en las redes sociales cuando se encontró con una influencer que promocionaba unos rizadores sin calor. \"Eran rizadores con los que podías dormir toda la noche y la promesa era despertarte con unos rizos preciosos\", le cuenta a la BBC.",
+								"publisher": "BBC",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/dc3789c0-6dad-4294-85de-401c46d18654.jpeg",
+								"recommendation_id": "965d7869-2b43-47d9-87e3-5a92bf0a8d11",
+								"score": 1
+							},
+							{
+								"id": 3306232426373291,
+								"url": "https://www.trendencias.com/silver/no-negociables-este-medico-experto-longevidad-para-vivir-mejor?utm_source=firefox-newtab-es-es",
+								"title": "Los 'no negociables' de este médico experto en longevidad para vivir más y mejor",
+								"excerpt": "\nEl doctor Darshan Shah explica en una entrenvista cómo vivir para tener una vida una vida larga y saludable\n",
+								"publisher": "Trendencias",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/97f641ec-f7b5-4a7f-8098-8674553510b9.jpeg",
+								"recommendation_id": "97d27332-f3a3-44fa-86ff-176786f6b37e",
+								"score": 1
+							},
+							{
+								"id": 7410690675856513,
+								"url": "https://www.bebesymas.com/noticias/tres-consejos-infalibles-reconocido-psicologo-que-me-ayudaron-a-encontrar-amor-verdadero?utm_source=firefox-newtab-es-es",
+								"title": "Los tres consejos infalibles de un reconocido psicólogo que me ayudaron a encontrar el amor verdadero",
+								"excerpt": "Todas las personas, o al menos quienes deseamos tener una pareja, deseamos encontrar una persona con la que podamos tener una relación amorosa, feliz y duradera.",
+								"publisher": "Bebés y Más",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/1db617a2-f52e-4a70-a648-bb1dc2b21805.jpeg",
+								"recommendation_id": "067f9923-d8ce-4a36-b5d8-43fa32afc9c3",
+								"score": 1
+							},
+							{
+								"id": 2246264468119515,
+								"url": "https://www.muyinteresante.com/historia/arqueologos-descubren-fichas-juego-estrategia-romano-turquia.html?utm_source=firefox-newtab-es-es",
+								"title": "Arqueólogos descubren en Turquía fichas antiguas de un juego de estrategia romano de hace 1.600 años al que jugaban los soldados para entrenar",
+								"excerpt": " Unas antiguas fichas de hueso halladas en Turquía revelan que los soldados romanos jugaban a juegos de estrategia para entrenar sus habilidades en el campo de batalla. ",
+								"publisher": "Muy Interesante",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/4b267774-b75a-4465-a4d0-89fd55fa5014.jpeg",
+								"recommendation_id": "ce57f9a6-3f90-4fd3-811d-ad5b158196d0",
+								"score": 1
+							},
+							{
+								"id": 2273367832708159,
+								"url": "https://www.nytimes.com/es/2025/02/11/espanol/estilos-de-vida/garbanzos-beneficios-recetas.html?utm_source=firefox-newtab-es-es",
+								"title": "¿Cuáles son los beneficios de comer garbanzos?",
+								"excerpt": "Las proteínas que aportan estas leguminosas la hacen una alternativa saludable si quieres incorporar más plantas a tu dieta.",
+								"publisher": "The New York Times",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/7a604385-5e75-4c0d-b423-7c26611cfcd7.jpeg",
+								"recommendation_id": "21fdd3de-6571-42d9-a4db-f48fab0b22a9",
+								"score": 1
+							},
+							{
+								"id": 4055388098007953,
+								"url": "https://theconversation.com/la-extrana-psicologia-de-los-aeropuertos-248925?utm_source=firefox-newtab-es-es",
+								"title": "La extraña psicología de los aeropuertos",
+								"excerpt": "Muchos de nosotros hemos sido testigos de comportamientos inusuales e incluso antisociales en un aeropuerto o en un vuelo.",
+								"publisher": "The Conversation",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/29eabc0e-d455-48d3-9d41-e97435c68ca7.jpeg",
+								"recommendation_id": "0a1bdcc2-879c-4cde-90e2-cfa7233a5915",
+								"score": 1
+							},
+							{
+								"id": 681155887428153,
+								"url": "https://www.relevo.com/futbol/liga-primera/renovacion-lewandowski-abre-debates-sobre-20250212144512-nt.html?utm_source=firefox-newtab-es-es",
+								"title": "La renovación de Lewandowski abre debates sobre cuál es el fichaje idóneo en el próximo mercado del Barça",
+								"excerpt": " El ariete polaco pasa por un muy buen estado de forma. ",
+								"publisher": "Relevo",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/79b513d8-0441-47a9-891a-6c961ba0a195.jpeg",
+								"recommendation_id": "fb3ec1dc-ceac-4b22-8e66-15d0fd465b27",
+								"score": 1
+							},
+							{
+								"id": 5759943546157214,
+								"url": "https://www.esquire.com/es/ciencia/a62959180/conciencia-corrientes-electricas-cerebro-misterio-humanidad/?utm_source=firefox-newtab-es-es",
+								"title": "Un equipo de científicos propone una nueva teoría según la cual la conciencia podría estar oculta en los campos eléctricos y magnéticos del cerebro",
+								"excerpt": "Estas señales invisibles podrían ser la clave de todo y ayudarnos a resolver el misterio de la conciencia, una de las tareas más complejas emprendidas por la humanidad.",
+								"publisher": "Esquire",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/47a9ff28-fe56-4df0-a4cf-320257e99b80.jpeg",
+								"recommendation_id": "cf4b7d3c-813a-4bbe-9979-3939540ffa19",
+								"score": 1
+							},
+							{
+								"id": 844265534969267,
+								"url": "https://www.businessinsider.es/finanzas-personales/como-invertir-10000-euros-ahora-mismo-seis-expertos-finanzas-1439612?utm_source=firefox-newtab-es-es",
+								"title": "Cómo invertir 10.000 euros ahora mismo, según seis expertos en finanzas",
+								"excerpt": "Los expertos en finanzas están recomendado a sus clientes diversificar su cartera de inversión con acciones, bonos y activos reales para invertir en 2025.",
+								"publisher": "Business Insider",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/f6945d28-09eb-429d-809a-3ea2a443be37.jpeg",
+								"recommendation_id": "18cd46eb-6ee4-40b9-98b7-4a41fbefe325",
+								"score": 1
+							},
+							{
+								"id": 1554789805705708,
+								"url": "https://www.serpadres.es/educacion/investiga-la-dislexia-en-bebes-de-3-meses.html?utm_source=firefox-newtab-es-es",
+								"title": "Harvard investiga la dislexia en bebés de 3 meses: así cambiará la detección temprana",
+								"excerpt": " La Universidad de Harvard tiene en marcha un proyecto pionero que investiga la dislexia en bebés de 3 meses antes de que aparezca el problema ",
+								"publisher": "SerPadres",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/87251407-a9cc-4177-9971-a7c769285a72.jpeg",
+								"recommendation_id": "f5ab7185-783f-46ce-9f5d-c2faa852acaf",
+								"score": 1
+							},
+							{
+								"id": 8384346886994927,
+								"url": "https://www.elmundo.es/economia/vivienda/2025/02/08/67a488dbfc6c83075a8b4599.html?utm_source=firefox-newtab-es-es",
+								"title": "Del 'austericidio' de la vivienda al recalentamiento de los precios : \"Hay una burbuja de demanda, la gente hace ofertas al alza y se sobreendeuda para comprar casa\"",
+								"excerpt": "Las medidas para evitar una burbuja como la de 2008 han terminado ahogando el mercado residencial y elevando los valores a niveles históricos. ¿Hay sobreprecio? ¿Cómo detectarlo?",
+								"publisher": "El Mundo",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/b0b36286-df59-4348-935f-af3b271090a2.jpeg",
+								"recommendation_id": "8608223e-87d1-4f6c-92bb-720fd87cb179",
+								"score": 1
+							},
+							{
+								"id": 5944079671307680,
+								"url": "https://www.eleconomista.es/galerias/eleconomista/21611/La-bebida-que-cada-vez-bebemos-menos-evita-la-perdida-de-memoria-y-ayuda-a-reducir-el-estres-tambien-mejora-la-concentracion?utm_source=firefox-newtab-es-es",
+								"title": "La bebida que cada vez bebemos menos, evita la pérdida de memoria y ayuda a reducir el estrés: también mejora la concentración",
+								"excerpt": "En España, las temperaturas son muy bajas en un gran porcentaje de zonas del país. Y no es para menos.",
+								"publisher": "elEconomista.es",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/e0fe1dc7-dacf-47e7-9fca-c8da417129f0.jpeg",
+								"recommendation_id": "d7e864b0-7b73-45b3-8a1d-ea9e5fbd7837",
+								"score": 1
+							},
+							{
+								"id": 3427987157817506,
+								"url": "https://www.bbc.com/mundo/articles/c7vdj2z447qo?utm_source=firefox-newtab-es-es",
+								"title": "Cómo un pequeño \"punto azul\" en nuestro cerebro controla el sueño y genera un enorme interés entre los científicos",
+								"excerpt": "Cualquiera que padezca insomnio conoce la impaciencia y la frustración que aparece mientras se lucha por apagar la cabeza y silenciar las voces interiores. Desearías tener un botón que pueda apagar instantáneamente toda esa actividad mental.",
+								"publisher": "BBC",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/4b24596b-df95-49bc-89c6-7a78055b56a7.jpeg",
+								"recommendation_id": "2a6c8cd3-35b0-4c1a-8cc6-6392d2f02d37",
+								"score": 1
+							},
+							{
+								"id": 8378137488271742,
+								"url": "https://www.revistaad.es/articulos/velas-de-miel-titual-dos-veces-mes?utm_source=firefox-newtab-es-es",
+								"title": "Velas de miel: aprende el ritual que atrae la energía positiva dos veces al mes",
+								"excerpt": "Es un ritual sencillo que te puede traer muchas alegrías. El poder las velas de miel, combinado con la numerología de los días 11 y 22 de cada mes, hará que la energía positiva fluya en tu casa y en tu vida.",
+								"publisher": "AD",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/684340e2-0181-4638-9e18-2fff83f55434.jpeg",
+								"recommendation_id": "1676f7fa-3bc8-46fa-b9eb-d19ba9746404",
+								"score": 1
+							},
+							{
+								"id": 8284790281116784,
+								"url": "https://viajar.elperiodico.com/escapate_cerca/encantos-san-lorenzo-escorial-sitio-real-114083035?utm_source=firefox-newtab-es-es",
+								"title": "Todos los encantos de San Lorenzo de El Escorial: un sitio muy real",
+								"excerpt": "Esta población de la sierra madrileña es un real sitio rebosante de piedras e historia. Pero también un sitio muy real, donde conviven emprendedores llegados de Japón, Senegal y Jijona, coleccionistas de bártulos y de mariposas.",
+								"publisher": "Viajar",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/440d728c-66f1-4cd3-b640-2a10eb17c00e.jpeg",
+								"recommendation_id": "0f584aad-0c2f-4869-bae7-231b293ff6da",
+								"score": 1
+							},
+							{
+								"id": 8174455710650511,
+								"url": "https://www.fotogramas.es/famosos-celebrities/a63739258/samuel-l-jackson-marlon-brandon-numero-telefono-restaurante-chino/?utm_source=firefox-newtab-es-es",
+								"title": "Samuel L. Jackson, sobre Marlon Brandon: \"Me dio su número de teléfono y cuando le llamé era un restaurante chino\"",
+								"excerpt": "La historia de cómo conoció Samuel L. Jackson a Marlon Brando tiene tantos giros de guion que parece un thriller de los que te mantienen pegado a la butaca.",
+								"publisher": "Fotogramas",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/9d1084ee-0841-4f48-8aab-2c738d3763e6.jpeg",
+								"recommendation_id": "a0353230-4b6a-4e9a-8313-4cb2d50b6aad",
+								"score": 1
+							},
+							{
+								"id": 3954470605856063,
+								"url": "https://www.elespanol.com/cocinillas/recetas/20250207/cena-deliciosa-siempre-hago-no-quiero-cocinar-lista-minutos-simple-lata-atun/1003678682099_30.html?utm_source=firefox-newtab-es-es",
+								"title": "La cena deliciosa que siempre hago cuando no quiero cocinar: lista en 5 minutos con una simple lata de atún",
+								"excerpt": "Con solo una lata de atún y unos pocos ingredientes básicos, puedes preparar un paté casero para una cena ligera o un aperitivo saludable.",
+								"publisher": "El Español",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/1152d557-f066-4999-8472-f9404b31aa64.jpeg",
+								"recommendation_id": "58676390-057c-440d-95ce-b1aa56f7c112",
+								"score": 1
+							},
+							{
+								"id": 2287024778995217,
+								"url": "https://www.mundodeportivo.com/urbantecno/ciencia/los-cientificos-han-creado-una-particula-de-luz-imposible-de-comprender-ha-atravesado-37-dimensiones-diferentes?utm_source=firefox-newtab-es-es",
+								"title": "Los científicos han creado una partícula de luz imposible de comprender: ha atravesado 37 dimensiones diferentes",
+								"excerpt": "Lo que comenzó siendo un experimento de física cuántica, ha acabado convirtiéndose en un conjunto colosal de dimensiones",
+								"publisher": "Mundo Deportivo",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/087ff4ba-bc1f-43f8-b4ac-cc83b8da6316.jpeg",
+								"recommendation_id": "2fa5a672-18ae-4881-91e8-52013f849e3d",
+								"score": 1
+							},
+							{
+								"id": 1247034341041647,
+								"url": "https://computerhoy.20minutos.es/tecnologia/ni-gafas-ni-movil-meta-prueba-espana-sombrero-teclear-mente-1441339?utm_source=firefox-newtab-es-es",
+								"title": "Ni gafas ni móvil: Meta prueba en España un casco para leer el pensamiento",
+								"excerpt": "Meta está probando en España una especie de casco que permite teclear texto usando la mente, con el objetivo de que la IA aprenda a pensar como los humanos. Ya reconoce el 80% de las teclas.",
+								"publisher": "Computer Hoy",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/4f4e176b-ae34-475d-8ec0-f88fadad8c6b.jpeg",
+								"recommendation_id": "81f21075-7987-4d11-aa94-0af510c4955f",
+								"score": 1
+							},
+							{
+								"id": 3499020844902636,
+								"url": "https://es.euronews.com/2025/02/06/40-anos-despues-de-la-apertura-de-la-verja-de-gibraltar-las-autoridades-esperan-un-nuevo-a?utm_source=firefox-newtab-es-es",
+								"title": "40 años después de la apertura de la Verja de Gibraltar, las autoridades esperan un nuevo acuerdo",
+								"excerpt": "Con la llegada de la democracia a España la situación en la frontera se intentó normalizar, pero, tras el Brexit, los expertos consideran que es necesario un nuevo acuerdo al que, de momento, parece complicado llegar. Analizamos la situación.",
+								"publisher": "Euronews Español",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/7805bca4-55d8-4cbe-86a3-9b31cf47e178.jpeg",
+								"recommendation_id": "6e0fe787-565f-4cea-84dc-eeb408c7b5ab",
+								"score": 1
+							},
+							{
+								"id": 4182234581701863,
+								"url": "https://blogs.elconfidencial.com/economia/la-mano-visible/2025-02-08/pensiones-racionalidad_4056537/?utm_source=firefox-newtab-es-es",
+								"title": "Pensiones y racionalidad (I)",
+								"excerpt": "Un sistema de jubilación sensato en una sociedad moderna debe estructurarse en torno a dos pilares: un pilar de reparto y uno contributivo. Lamentablemente, nuestro sistema es casi exclusivamente de reparto.",
+								"publisher": "El Confidencial",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/3dfb2d97-d403-4245-a8e4-edd995d9d3e7.jpeg",
+								"recommendation_id": "c4a0bbfa-de5f-4cf9-95e4-bc2b84421f2e",
+								"score": 1
+							},
+							{
+								"id": 4638476264003380,
+								"url": "https://www.revistaad.es/galerias/cocinas-modernas-y-llenas-de-color-que-querras-copiar?utm_source=firefox-newtab-es-es",
+								"title": "13 cocinas modernas y llenas de color que querrás copiar en tu casa",
+								"excerpt": "Colores pastel, suelos de linóleo, toques 'vintage'… Resumimos las tendencias en cocinas más potentes de 2025 en 13 imágenes que en las que querrás quedarte a vivir. ¡Copia todos sus trucos!",
+								"publisher": "AD",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/1ee0c229-8883-4785-92c7-46c0a8df823a.jpeg",
+								"recommendation_id": "203b10fb-ab60-4e16-ab62-098d1d0115f4",
+								"score": 1
+							},
+							{
+								"id": 2926552999436375,
+								"url": "https://www.rtve.es/noticias/20250211/cronologia-litigios-legales-marcado-historia-hotel-ilegal-algarrobico/16443771.shtml?utm_source=firefox-newtab-es-es",
+								"title": "Cronología de la demolición de El Algarrobico: un litigio eterno contra el símbolo de la especulación urbanística",
+								"excerpt": "El Gobierno da luz verde para expropiar los terrenos del hotel El Algarrobico y demolerlo. Organizaciones como Greenpeace llevan años denunciando su impacto sobre la naturaleza del lugar.",
+								"publisher": "rtve.es",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/2968ab96-ccb7-476c-a17b-a0d553b47d50.jpeg",
+								"recommendation_id": "ec773d29-c6a6-4e5a-91e5-ec62dc69780e",
+								"score": 1
+							},
+							{
+								"id": 7392559645928090,
+								"url": "https://www.relevo.com/rugby/mundial/rugby-espanol-entierra-anos-anos-20250209182425-nt.html?utm_source=firefox-newtab-es-es",
+								"title": "El éxito del rugby español acaba con un esperpento y llega con un asterisco",
+								"excerpt": "El XV del León logra el billete para el Mundial de Australia 2027 tras las descalificaciones de 2019 y 2023.",
+								"publisher": "Relevo",
+								"raw_image_src": "https://s3.us-east-1.amazonaws.com/pocket-curatedcorpusapi-prod-images/734a6b8a-2d59-4809-b95e-92a854c2c290.jpeg",
+								"recommendation_id": "aa2aa9f9-e223-4355-985d-ab9360e864bf",
+								"score": 1
+							}
+						],
+						"status": "success"
+					}
+				}
+			},
+			"loaded": true
+		},
+		"spocs": {
+			"spocs_endpoint": "https://spocs.getpocket.com/spocs",
+			"lastUpdated": 1739450138761,
+			"data": {
+				"settings": {
+					"feature_flags": {
+						"collections": false,
+						"spoc_v2": true
+					},
+					"spocsPerNewTabs": 1,
+					"domainAffinityParameterSets": {
+						"default": {
+							"combinedDomainFactor": 0.5,
+							"frequencyFactor": 0.5,
+							"itemScoreFactor": 1,
+							"multiDomainBoost": 0,
+							"perfectCombinedDomainScore": 2,
+							"perfectFrequencyVisits": 10,
+							"recencyFactor": 0.5
+						},
+						"fully-personalized": {
+							"combinedDomainFactor": 0.5,
+							"frequencyFactor": 0.5,
+							"itemScoreFactor": 0.01,
+							"multiDomainBoost": 0,
+							"perfectCombinedDomainScore": 2,
+							"perfectFrequencyVisits": 10,
+							"recencyFactor": 0.5
+						},
+						"fully-personalized-domains": {
+							"combinedDomainFactor": 0.5,
+							"frequencyFactor": 0.5,
+							"itemScoreFactor": 0.01,
+							"multiDomainBoost": 0,
+							"perfectCombinedDomainScore": 10,
+							"perfectFrequencyVisits": 1,
+							"recencyFactor": 0.5
+						}
+					},
+					"timeSegments": [
+						{
+							"id": "week-1",
+							"startTime": 432000,
+							"endTime": 0,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-2",
+							"startTime": 864000,
+							"endTime": 432000,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-3",
+							"startTime": 1296000,
+							"endTime": 864000,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-4",
+							"startTime": 1728000,
+							"endTime": 1296000,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-5",
+							"startTime": 2160000,
+							"endTime": 1728000,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-6",
+							"startTime": 2592000,
+							"endTime": 2160000,
+							"weightPosition": 1
+						}
+					]
+				},
+				"spocs": {
+					"title": "",
+					"context": "",
+					"items": []
+				},
+				"sponsored-topsites": {
+					"title": "",
+					"context": "",
+					"items": []
+				}
+			},
+			"loaded": true,
+			"frequency_caps": [],
+			"blocked": [],
+			"placements": [
+				{
+					"name": "sponsored-topsites",
+					"ad_types": [
+						3120
+					],
+					"zone_ids": [
+						280143
+					]
+				},
+				{
+					"name": "spocs",
+					"ad_types": [
+						3617
+					],
+					"zone_ids": [
+						217758,
+						217995
+					]
+				}
+			]
+		},
+		"experimentData": {
+			"utmSource": "pocket-newtab"
+		},
+		"recentSavesData": [],
+		"isUserLoggedIn": false,
+		"recentSavesEnabled": false,
+		"pocketButtonEnabled": true,
+		"saveToPocketCard": true,
+		"hideDescriptions": false,
+		"compactImages": false,
+		"imageGradient": false,
+		"newSponsoredLabel": false,
+		"titleLines": 3,
+		"descLines": 3,
+		"readTime": true
+	},
+	"Search": {
+		"fakeFocus": false,
+		"hide": false
+	},
+	"Wallpapers": {
+		"wallpaperList": [],
+		"highlightSeenCounter": {
+			"value": 0
+		},
+		"categories": []
+	},
+	"Weather": {
+		"initialized": false,
+		"lastUpdated": null,
+		"query": "",
+		"suggestions": [],
+		"locationData": {
+			"city": "",
+			"adminArea": "",
+			"country": ""
+		},
+		"searchActive": false,
+		"locationSearchString": "",
+		"suggestedLocations": []
+	}
+};
+
+~()�2z           g���G�t�����       :about:home alt-data 1;78486,script version 20240819223648  !F
